@@ -8,6 +8,8 @@ namespace DesktopApp
 {
     class LumberCompany
     {
+        private string m_lcUsername { get; set; }
+        private string m_lcHashPass { get; set; }
         private string m_lcAddress { get; set; }
         private string m_lcName { get; set; }
         private int m_lcPhoneNum { get; set; }
@@ -15,8 +17,10 @@ namespace DesktopApp
         private List<TruckDriver> m_lcEmployees { get; set; }
         private int m_lcID { get; set; }
 
-        public LumberCompany(string companyName, string address, int phoneNum)
+        public LumberCompany(string username, string hashpass, string companyName, string address, int phoneNum)
         {
+            m_lcUsername = username;
+            m_lcHashPass = hashpass;
             m_lcAddress = address;
             m_lcName = companyName;
             m_lcPhoneNum = phoneNum;

@@ -8,6 +8,8 @@ namespace DesktopApp
 {
     class HardwareStore
     {
+        private string m_hsUsername { get; set; }
+        private string m_hsHashPass { get; set; }
         private string m_hsAddress { get; set; }
         private string m_hsName { get; set; }
         private int m_hsPhoneNum { get; set; }
@@ -15,8 +17,10 @@ namespace DesktopApp
         private List<TruckDriver> m_hsEmployees { get; set; }
         private int m_hsID { get; set; }
 
-        public HardwareStore(string companyName, string address, int phoneNum)
+        public HardwareStore(string username, string hashpass, string companyName, string address, int phoneNum)
         {
+            m_hsUsername = username;
+            m_hsHashPass = hashpass;
             m_hsAddress = address;
             m_hsName = companyName;
             m_hsPhoneNum = phoneNum;
@@ -24,6 +28,16 @@ namespace DesktopApp
             // On login, grab list of employees and set list equal
             // set NumEmployees equal to size of list
             // Grab ID from database and increase and set m_lcID
+        }
+
+        public void AddTD(TruckDriver driver)
+        {
+            m_hsEmployees.Append(driver);
+        }
+
+        public void DeleteTD(TruckDriver driver)
+        {
+            m_hsEmployees.Remove(driver);
         }
     }
 }
