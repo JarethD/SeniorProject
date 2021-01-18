@@ -29,5 +29,15 @@ namespace DesktopApp
             // set NumEmployees equal to size of list
             // Grab ID from database and increase and set m_lcID
         }
+
+        public void AddTD(TruckDriver driver)
+        {
+            m_lcEmployees.Append(driver);
+        }
+
+        public void DeleteTD(TruckDriver driver)
+        {
+            m_lcEmployees.Remove(driver);
+        }
     }
 }

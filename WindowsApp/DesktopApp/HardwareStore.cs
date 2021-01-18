@@ -14,7 +14,7 @@ namespace DesktopApp
         private string m_hsName { get; set; }
         private int m_hsPhoneNum { get; set; }
         private int m_hsNumEmployees { get; set; }
-        private List<TruckDriver> m_hsEmployees { get; set; }
+        private List<LumberAssociate> m_hsEmployees { get; set; }
         private int m_hsID { get; set; }
 
         public HardwareStore(string username, string hashpass, string companyName, string address, int phoneNum)
@@ -30,14 +30,14 @@ namespace DesktopApp
             // Grab ID from database and increase and set m_lcID
         }
 
-        public void AddTD(TruckDriver driver)
+        public void AddTD(LumberAssociate associate)
         {
-            m_hsEmployees.Append(driver);
+            m_hsEmployees.Append(associate);
         }
 
-        public void DeleteTD(TruckDriver driver)
+        public void DeleteTD(LumberAssociate associate)
         {
-            m_hsEmployees.Remove(driver);
+            m_hsEmployees.Remove(associate);
         }
     }
 }
