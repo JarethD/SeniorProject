@@ -10,14 +10,16 @@ namespace DesktopApp
     {
         private string m_laUsername { get; set; }
         private string m_laHashPass { get; set; }
-        private string m_laID { get; set; }
+        private int m_laID { get; set; }
         private string m_laName { get; set; }
-        private int m_laPhoneNumber { get; set; }
+        private long m_laPhoneNumber { get; set; }
         private string m_laCompany { get; set; }
         private List<Order> m_laOrders { get; set; }
 
-        public LumberAssociate(string username, string haspass, string id, 
-            string name, int phoneNumber, string company)
+        private int m_laCompanyID { get; set; }
+
+        public LumberAssociate(string username, string haspass, int id, 
+            string name, long phoneNumber, string company, int companyID)
         {
             m_laOrders = new List<Order>();
             m_laUsername = username;
@@ -26,6 +28,7 @@ namespace DesktopApp
             m_laName = name;
             m_laPhoneNumber = phoneNumber;
             m_laCompany = company;
+            m_laCompanyID = companyID;
         }
 
         public void AddOrder(Order newOrder)
