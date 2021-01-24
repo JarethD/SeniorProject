@@ -109,6 +109,14 @@ namespace DesktopApp
         {
             return !(lhd == rhd);
         }
+        public override bool Equals(object o)
+        {
+            return true;
+        }
+        public override int GetHashCode()
+        {
+            return 0;
+        }
         public void AddTD(TruckDriver driver)
         {
             m_lcEmployees.Append(driver);

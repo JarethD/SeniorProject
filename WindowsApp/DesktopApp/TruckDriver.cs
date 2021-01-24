@@ -8,15 +8,55 @@ namespace DesktopApp
 {
     class TruckDriver
     {
-        private string m_trUsername { get; set; }
-        private string m_trHashPass { get; set; }
-        private string m_trName { get; set; }
-        private int m_trPhoneNum { get; set; }
-        private string m_trAddress { get; set; }
-        private string m_trCompany { get; set; }
-        private int m_trID { get; set; }
-        private List<Order> m_trOrders { get; set; }
-        public TruckDriver(string username, string hashpass, string name, int num, string address, string company)
+        private string m_trUsername;
+        public string username
+        {
+            get => m_trUsername;
+            set => m_trUsername = username;
+        }
+        private string m_trHashPass;
+        public string HashPass
+        {
+            get => m_trHashPass;
+            set => m_trHashPass = HashPass;
+        }
+        private string m_trName;
+        public string name
+        {
+            get => m_trName;
+            set => m_trName = name;
+        }
+        private long m_trPhoneNum;
+        public long Phonenum
+        {
+            get => m_trPhoneNum;
+            set => m_trPhoneNum = Phonenum;
+        }
+        private string m_trAddress;
+        public string Address
+        {
+            get => m_trAddress;
+            set => m_trAddress = Address;
+        }
+        private string m_trCompany;
+        public string Company
+        {
+            get => m_trCompany;
+            set => m_trCompany = Company;
+        }
+        private int m_trID;
+        public int ID
+        {
+            get => m_trID;
+            set => m_trID = ID;
+        }
+        private List<Order> m_trOrders;
+        public List<Order> Orders
+        {
+            get => m_trOrders;
+            set => m_trOrders = Orders;
+        }
+        public TruckDriver(string username, string hashpass, string name, long num, string address, string company)
         {
             m_trUsername = username;
             m_trHashPass = hashpass;

@@ -57,7 +57,8 @@ namespace DesktopApp
             set => m_hsID = ID;
         }
 
-        public HardwareStore(string username, string hashpass, string companyName, string address, long phoneNum, int storeID)
+        public HardwareStore(string username, string hashpass, string companyName, 
+            string address, long phoneNum, int storeID, int id)
         {
             m_hsUsername = username;
             m_hsHashPass = hashpass;
@@ -65,6 +66,7 @@ namespace DesktopApp
             m_hsName = companyName;
             m_hsPhoneNum = phoneNum;
             m_hsID = storeID;
+            m_hsID = id;
 
             // On login, grab list of employees and set list equal
             // set NumEmployees equal to size of list

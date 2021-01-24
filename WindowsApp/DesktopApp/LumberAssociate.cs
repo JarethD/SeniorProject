@@ -8,15 +8,56 @@ namespace DesktopApp
 {
     class LumberAssociate : Order
     {
-        private string m_laUsername { get; set; }
-        private string m_laHashPass { get; set; }
-        private int m_laID { get; set; }
-        private string m_laName { get; set; }
-        private long m_laPhoneNumber { get; set; }
-        private string m_laCompany { get; set; }
-        private List<Order> m_laOrders { get; set; }
+        private string m_laUsername;
+        public string username
+        {
+            get => m_laUsername;
+            set => m_laUsername = username;
+        }
+        private string m_laHashPass;
+        public string HashPass
+        {
+            get => m_laHashPass;
+            set => m_laHashPass = HashPass;
+        }
+        private int m_laID;
+        public int ID
+        {
+            get => m_laID;
+            set => m_laID = ID;
+        }
 
-        private int m_laCompanyID { get; set; }
+        private string m_laName;
+        public string name
+        {
+            get => m_laName;
+            set => m_laName = name;
+        }
+        private long m_laPhoneNumber;
+        public long Phonenum
+        {
+            get => m_laPhoneNumber;
+            set => m_laPhoneNumber = Phonenum;
+        }
+        private string m_laCompany;
+        public string Company
+        {
+            get => m_laCompany;
+            set => m_laCompany = Company;
+        }
+        private List<Order> m_laOrders;
+        public List<Order> Orders
+        {
+            get => m_laOrders;
+            set => m_laOrders = Orders;
+        }
+
+        private int m_laCompanyID;
+        public int laCompanyID
+        {
+            get => m_laCompanyID;
+            set => m_laCompanyID = laCompanyID;
+        }
 
         public LumberAssociate(string username, string haspass, int id, 
             string name, long phoneNumber, string company, int companyID)
