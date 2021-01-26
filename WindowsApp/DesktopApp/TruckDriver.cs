@@ -56,6 +56,8 @@ namespace DesktopApp
             get => m_trOrders;
             set => m_trOrders = Orders;
         }
+        public TruckDriver()
+        { }
         public TruckDriver(string username, string hashpass, string name, long num, string address, string company)
         {
             m_trUsername = username;

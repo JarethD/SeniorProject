@@ -56,7 +56,9 @@ namespace DesktopApp
             get => m_hsID;
             set => m_hsID = ID;
         }
-
+        
+        public HardwareStore()
+        { }
         public HardwareStore(string username, string hashpass, string companyName, 
             string address, long phoneNum, int storeID, int id)
         {

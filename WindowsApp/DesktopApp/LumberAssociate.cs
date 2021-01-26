@@ -59,6 +59,8 @@ namespace DesktopApp
             set => m_laCompanyID = laCompanyID;
         }
 
+        public LumberAssociate()
+        { }
         public LumberAssociate(string username, string haspass, int id, 
             string name, long phoneNumber, string company, int companyID)
         {

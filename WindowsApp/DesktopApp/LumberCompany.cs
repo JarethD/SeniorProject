@@ -57,6 +57,8 @@ namespace DesktopApp
             set => m_lcID = ID; 
         }
 
+        public LumberCompany()
+        { }
         public LumberCompany(string username, string hashpass, string companyName, string address, long phoneNum, int id)
         {
             m_lcUsername = username;
