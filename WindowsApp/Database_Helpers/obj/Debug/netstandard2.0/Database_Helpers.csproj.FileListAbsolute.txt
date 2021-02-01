@@ -1,0 +1,4 @@
+C:\Users\Jareth\Desktop\sp\WindowsApp\Database_Helpers\bin\Debug\netstandard2.0\DesktopApp.exe
+C:\Users\Jareth\Desktop\sp\WindowsApp\Database_Helpers\obj\Debug\netstandard2.0\Database_Helpers.csprojAssemblyReference.cache
+C:\Users\Jareth\Desktop\sp\WindowsApp\Database_Helpers\obj\Debug\netstandard2.0\Database_Helpers.AssemblyInfoInputs.cache
+C:\Users\Jareth\Desktop\sp\WindowsApp\Database_Helpers\obj\Debug\netstandard2.0\Database_Helpers.AssemblyInfo.cs

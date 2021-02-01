@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DesktopApp
+{
+    public interface iSqlServerDataAccess
+    {
+        int ExecuteQuery_NoReturnType(string sql);
+        TruckDriver ExecuteQuery_SingleTD(string sql);
+        LumberAssociate ExecuteQuery_SingleLA(string sql);
+        LumberCompany ExecuteQuery_SingleLC(string sql);
+        HardwareStore ExecuteQuery_SingleHS(string sql);
+
+    }
+}
