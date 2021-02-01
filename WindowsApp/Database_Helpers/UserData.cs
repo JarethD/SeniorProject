@@ -13,6 +13,11 @@ namespace Database_Helpers
             _database = database;
         }
 
+        /// <summary>
+        ///     Add Truck Driver to Employee table in database
+        /// </summary>
+        /// <param name="newDriver"> Truck Driver to be added</param>
+        /// <returns> 0 is successfull, 1 if fail </returns>
         public int AddTruckDriver(TruckDriver newDriver)
         {
             string query = String.Format("INSERT INTO EMPLOYEE " +
@@ -23,6 +28,11 @@ namespace Database_Helpers
             return _database.ExecuteQuery_NoReturnType(query);
         }
 
+        /// <summary>
+        ///     Add Lumber Associate to Employee table in database
+        /// </summary>
+        /// <param name="newLA"> Lumber Associate to be added</param>
+        /// <returns> 0 is successfull, 1 if fail </returns>
         public int AddLumberAssociate(LumberAssociate newLA)
         {
             string query = String.Format("INSERT INTO EMPLOYEE " +
@@ -33,24 +43,39 @@ namespace Database_Helpers
             return _database.ExecuteQuery_NoReturnType(query);
         }
 
-        public int AddLumberCompany(LumberAssociate newCompany)
+        /// <summary>
+        ///     Add Lumber Company to Company table in database
+        /// </summary>
+        /// <param name="newCompany"> Lum</param>
+        /// <returns> 0 is successfull, 1 if fail </returns>
+        public int AddLumberCompany(LumberCompany newCompany)
         {
             string query = String.Format("INSERT INTO COMPANY " +
             "VALUES('{0}', '{1}','{2}','{3}','{4}','{5}', '{6}')",
             newCompany.username, newCompany.HashPass, newCompany.ID,
-            newCompany.Phonenum, newCompany.Company, newCompany.Company);
+            newCompany.Phonenum, newCompany.name, newCompany.Address);
 
             return _database.ExecuteQuery_NoReturnType(query);
         }
 
-        public int AddHardwarStore(LumberAssociate newStore)
+        /// <summary>
+        ///     Add Lumber associate to Company table in database
+        /// </summary>
+        /// <param name="newStore"> Lumber Associate to be added to database</param>
+        /// <returns> 0 is successfull, 1 if fail </returns>
+        public int AddHardwarStore(HardwareStore newStore)
         {
             string query = String.Format("INSERT INTO COMPANY " +
             "VALUES('{0}', '{1}','{2}','{3}','{4}','{5}', '{6}')",
             newStore.username, newStore.HashPass, newStore.ID,
-            newStore.Phonenum, newStore.Company, newStore.Company);
+            newStore.Phonenum, newStore.name, newStore.Address);
 
             return _database.ExecuteQuery_NoReturnType(query);
+        }
+
+        //public TruckDriver GetDriver(string username)
+        {
+
         }
 
     }

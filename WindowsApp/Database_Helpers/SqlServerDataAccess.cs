@@ -323,6 +323,28 @@ namespace Database_Helpers
             }
         }
 
+        public void ExecuteQuery_GetOrderTD(TruckDriver driver)
+        {
+            string query = "SELECT Order FROM ORDER WHERE ID = '" + driver.ID + "';";
+
+            using (SqlConnection con = new SqlConnection(GetConnectionString()))
+            {
+                SqlCommand com = new SqlCommand(query, con);
+
+                con.Open();
+                SqlDataReader read = com.ExecuteReader();
+
+                while(read.Read()) //Reads single line
+                {
+                    //Order Datamember = read.GetInt32(0) EXAMPLE
+                }
+            }
+        }
+
+        //public List<Order> ExecuteQuery_GetOrderLA(LumberAssociate associate)
+        {
+            
+        }
 
     }
 }
