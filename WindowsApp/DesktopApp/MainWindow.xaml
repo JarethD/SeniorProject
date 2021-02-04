@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Button x:Name="AddHardwarestore" Content="Add HS" HorizontalAlignment="Left" Height="20"/>
+        <Button x:Name="AddLumberassociate" Content="Add la" HorizontalAlignment="Center" Height="20" Click="AddLumberassociate_Click"/>
+        <Button x:Name="AddLumbercompany" Content="Add lc" HorizontalAlignment="right" Height="20"/>
+        <Button x:Name="AddTruckdriver" Content="Add td" HorizontalAlignment="Center" VerticalAlignment="Top" Height="20"/>
     </Grid>
 </Window>

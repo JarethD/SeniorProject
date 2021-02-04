@@ -40,6 +40,38 @@ namespace DesktopApp {
     /// </summary>
     public partial class MainWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
+        
+        #line 10 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button AddHardwarestore;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 11 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button AddLumberassociate;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 12 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button AddLumbercompany;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 13 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button AddTruckdriver;
+        
+        #line default
+        #line hidden
+        
         private bool _contentLoaded;
         
         /// <summary>
@@ -68,6 +100,27 @@ namespace DesktopApp {
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
         void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target) {
+            switch (connectionId)
+            {
+            case 1:
+            this.AddHardwarestore = ((System.Windows.Controls.Button)(target));
+            return;
+            case 2:
+            this.AddLumberassociate = ((System.Windows.Controls.Button)(target));
+            
+            #line 11 "..\..\MainWindow.xaml"
+            this.AddLumberassociate.Click += new System.Windows.RoutedEventHandler(this.AddLumberassociate_Click);
+            
+            #line default
+            #line hidden
+            return;
+            case 3:
+            this.AddLumbercompany = ((System.Windows.Controls.Button)(target));
+            return;
+            case 4:
+            this.AddTruckdriver = ((System.Windows.Controls.Button)(target));
+            return;
+            }
             this._contentLoaded = true;
         }
     }

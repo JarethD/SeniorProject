@@ -5,7 +5,7 @@ using DesktopApp;
 
 namespace Database_Helpers
 {
-    class UserData
+    public class UserData
     {
         private iSqlServerDataAccess _database;
         public UserData(iSqlServerDataAccess database)
@@ -21,9 +21,9 @@ namespace Database_Helpers
         public int AddTruckDriver(TruckDriver newDriver)
         {
             string query = String.Format("INSERT INTO EMPLOYEE " +
-                "VALUES('{0}', '{1}','{2}','{3}','{4}','{5}', '{6}')",
-                newDriver.username, newDriver.HashPass, newDriver.ID,
-                newDriver.Phonenum, newDriver.Company, newDriver.Address);
+                "VALUES('{0}', '{1}','{2}','{3}','{4}','{5}', '{6}', '{7}')",
+                newDriver.username, newDriver.HashPass, newDriver.name, newDriver.ID,
+                newDriver.Phonenum, newDriver.Address, newDriver.Company);
 
             return _database.ExecuteQuery_NoReturnType(query);
         }
@@ -36,9 +36,9 @@ namespace Database_Helpers
         public int AddLumberAssociate(LumberAssociate newLA)
         {
             string query = String.Format("INSERT INTO EMPLOYEE " +
-            "VALUES('{0}', '{1}','{2}','{3}','{4}','{5}', '{6}')",
+            "VALUES('{0}', '{1}','{2}','{3}','{4}','{5}', '{6}', '(7}')",
             newLA.username, newLA.HashPass, newLA.ID,
-            newLA.Phonenum, newLA.Company, newLA.Company);
+            newLA.Phonenum, newLA.Company, newLA.Address, newLA.Company);
 
             return _database.ExecuteQuery_NoReturnType(query);
         }
@@ -74,9 +74,7 @@ namespace Database_Helpers
         }
 
         //public TruckDriver GetDriver(string username)
-        {
-
-        }
+        
 
     }
 }

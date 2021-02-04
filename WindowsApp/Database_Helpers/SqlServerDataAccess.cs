@@ -342,10 +342,6 @@ namespace Database_Helpers
         }
 
         //public List<Order> ExecuteQuery_GetOrderLA(LumberAssociate associate)
-        {
-            
-        }
-
     }
 }
         

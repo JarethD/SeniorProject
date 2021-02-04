@@ -84,6 +84,7 @@
     <Compile Include="Classes\LumberCompany.cs" />
     <Compile Include="Classes\TruckDriver.cs" />
     <Compile Include="iSqlServerDataAccess.cs" />
+    <Compile Include="iUserData.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

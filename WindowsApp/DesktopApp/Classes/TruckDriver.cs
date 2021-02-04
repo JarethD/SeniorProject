@@ -58,12 +58,12 @@ namespace DesktopApp
         }
         public TruckDriver()
         { }
-        public TruckDriver(string username, string hashpass, string name, long num, string address, string company)
+        public TruckDriver(string username, string hashpass, string name, long phonenum, string address, string company)
         {
             m_trUsername = username;
             m_trHashPass = hashpass;
             m_trName = name;
-            m_trPhoneNum = num;
+            m_trPhoneNum = phonenum;
             m_trAddress = address;
             m_trCompany = company;
             //Grab greatest ID number from database and increment by and set m_trID to new ID 

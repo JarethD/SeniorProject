@@ -59,19 +59,27 @@ namespace DesktopApp
             set => m_laCompanyID = laCompanyID;
         }
 
+        private string m_laAddress;
+        public string Address
+        {
+            get => m_laAddress;
+            set => m_laAddress = Address;
+        }
+
         public LumberAssociate()
         { }
-        public LumberAssociate(string username, string haspass, int id, 
-            string name, long phoneNumber, string company, int companyID)
+        public LumberAssociate(string username, string haspass, //int id, 
+            string name, long phoneNumber, string address, string company)//, int companyID)
         {
             m_laOrders = new List<Order>();
             m_laUsername = username;
             m_laHashPass = haspass;
-            m_laID = id;
+            //m_laID = id;
             m_laName = name;
             m_laPhoneNumber = phoneNumber;
+            m_laAddress = address;
             m_laCompany = company;
-            m_laCompanyID = companyID;
+            //m_laCompanyID = companyID;
         }
 
         public void AddOrder(Order newOrder)
