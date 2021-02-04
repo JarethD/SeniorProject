@@ -79,6 +79,7 @@ namespace DesktopApp
             m_laPhoneNumber = phoneNumber;
             m_laAddress = address;
             m_laCompany = company;
+            m_laID = 0;
             //m_laCompanyID = companyID;
         }
 

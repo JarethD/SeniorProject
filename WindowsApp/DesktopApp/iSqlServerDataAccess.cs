@@ -8,6 +8,7 @@ namespace DesktopApp
 {
     public interface iSqlServerDataAccess
     {
+        int ExecuteQuery_SingleID(string sql);
         int ExecuteQuery_NoReturnType(string sql);
         TruckDriver ExecuteQuery_SingleTD(string sql);
         LumberAssociate ExecuteQuery_SingleLA(string sql);

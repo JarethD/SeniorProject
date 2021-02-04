@@ -181,9 +181,9 @@ namespace Database_Helpers
 
                     if (read.Read())
                     {
-                        userID = read.GetInt32(0);
-                        userName = read.GetString(1);
-                        hash = read.GetString(2);
+                        userName = read.GetString(0);
+                        hash = read.GetString(1);
+                        userID = read.GetInt32(2);
                     }
 
                     read.Close();
@@ -221,9 +221,9 @@ namespace Database_Helpers
 
                     if (read.Read())
                     {
-                        userID = read.GetInt32(0);
-                        userName = read.GetString(1);
-                        hash = read.GetString(2);
+                        userName = read.GetString(0);
+                        hash = read.GetString(1);
+                        userID = read.GetInt32(2);
                     }
 
                     read.Close();
@@ -261,9 +261,9 @@ namespace Database_Helpers
 
                     if (read.Read())
                     {
-                        userID = read.GetInt32(0);
-                        userName = read.GetString(1);
-                        hash = read.GetString(2);
+                        userName = read.GetString(0);
+                        hash = read.GetString(1);
+                        userID = read.GetInt32(2);
                     }
 
                     read.Close();
@@ -281,7 +281,6 @@ namespace Database_Helpers
                 return lc;
             }
         }
-
 
         public HardwareStore ExecuteQuery_SingleHS(string sql)
         {
@@ -302,9 +301,9 @@ namespace Database_Helpers
 
                     if (read.Read())
                     {
-                        userID = read.GetInt32(0);
-                        userName = read.GetString(1);
-                        hash = read.GetString(2);
+                        userName = read.GetString(0);
+                        hash = read.GetString(1);
+                        userID = read.GetInt32(2);
                     }
 
                     read.Close();
@@ -320,6 +319,38 @@ namespace Database_Helpers
                     hsEmployees = new List<LumberAssociate>()
                 };
                 return hs;
+            }
+        }
+
+        public int ExecuteQuery_SingleID(string sql)
+        {
+            using (SqlConnection con = new SqlConnection(GetConnectionString()))
+            {
+                SqlCommand com = new SqlCommand(sql, con);
+
+                int userID = 0;
+                string userName = "";
+                string hash = "";
+
+                try { con.Open(); }
+                catch (Exception) { return -1; }
+
+                try
+                {
+                    SqlDataReader read = com.ExecuteReader();
+
+                    if (read.Read())
+                    {
+                        userName = read.GetString(0);
+                        hash = read.GetString(1);
+                        userID = read.GetInt32(2);
+                    }
+
+                    read.Close();
+                }
+                catch (Exception) { return -1; }
+
+                return userID;
             }
         }
 

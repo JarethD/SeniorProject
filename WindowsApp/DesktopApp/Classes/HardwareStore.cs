@@ -60,15 +60,17 @@ namespace DesktopApp
         public HardwareStore()
         { }
         public HardwareStore(string username, string hashpass, string companyName, 
-            string address, long phoneNum, int storeID, int id)
+            string address, long phoneNum)//, int storeID, int id)
         {
             m_hsUsername = username;
             m_hsHashPass = hashpass;
             m_hsAddress = address;
             m_hsName = companyName;
             m_hsPhoneNum = phoneNum;
-            m_hsID = storeID;
-            m_hsID = id;
+            m_hsEmployees = new List<LumberAssociate>();
+            m_hsNumEmployees = 0;
+            //m_hsID = storeID;
+            //m_hsID = id;
 
             // On login, grab list of employees and set list equal
             // set NumEmployees equal to size of list

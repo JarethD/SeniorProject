@@ -59,7 +59,7 @@ namespace DesktopApp
 
         public LumberCompany()
         { }
-        public LumberCompany(string username, string hashpass, string companyName, string address, long phoneNum, int id)
+        public LumberCompany(string username, string hashpass, string companyName, string address, long phoneNum)//, int id)
         {
             m_lcUsername = username;
             m_lcHashPass = hashpass;
@@ -67,7 +67,8 @@ namespace DesktopApp
             m_lcName = companyName;
             m_lcPhoneNum = phoneNum;
             m_lcEmployees = new List<TruckDriver>();
-            m_lcID = id;
+            m_lcNumEmployees = 0;
+            //m_lcID = id;
             // On login, grab list of employees and set list equal
             // set NumEmployees equal to size of list
             // Grab ID from database and increase and set m_lcID

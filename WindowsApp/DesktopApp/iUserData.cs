@@ -10,7 +10,7 @@ namespace DesktopApp
     {
 
 
-
+        int GetRecentCompanyID();
         int AddTruckDriver(TruckDriver newDriver);
         int AddLumberAssociate(LumberAssociate newLA);
         int AddLumberCompany(LumberCompany newCompany);

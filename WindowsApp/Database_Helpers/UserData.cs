@@ -5,12 +5,19 @@ using DesktopApp;
 
 namespace Database_Helpers
 {
-    public class UserData
+    public class UserData : iUserData
     {
         private iSqlServerDataAccess _database;
         public UserData(iSqlServerDataAccess database)
         {
             _database = database;
+        }
+
+        public int GetRecentCompanyID()
+        {
+            string query = String.Format("SELECT MAX(ID) FROM COMPANY");
+            int newID = _database.ExecuteQuery_SingleID(query);
+            return ++newID;
         }
 
         /// <summary>
@@ -20,7 +27,8 @@ namespace Database_Helpers
         /// <returns> 0 is successfull, 1 if fail </returns>
         public int AddTruckDriver(TruckDriver newDriver)
         {
-            string query = String.Format("INSERT INTO EMPLOYEE " +
+
+            string query = String.Format("INSERT INTO Employees " +
                 "VALUES('{0}', '{1}','{2}','{3}','{4}','{5}', '{6}', '{7}')",
                 newDriver.username, newDriver.HashPass, newDriver.name, newDriver.ID,
                 newDriver.Phonenum, newDriver.Address, newDriver.Company);
@@ -35,7 +43,7 @@ namespace Database_Helpers
         /// <returns> 0 is successfull, 1 if fail </returns>
         public int AddLumberAssociate(LumberAssociate newLA)
         {
-            string query = String.Format("INSERT INTO EMPLOYEE " +
+            string query = String.Format("INSERT INTO Employees " +
             "VALUES('{0}', '{1}','{2}','{3}','{4}','{5}', '{6}', '(7}')",
             newLA.username, newLA.HashPass, newLA.ID,
             newLA.Phonenum, newLA.Company, newLA.Address, newLA.Company);
@@ -50,10 +58,14 @@ namespace Database_Helpers
         /// <returns> 0 is successfull, 1 if fail </returns>
         public int AddLumberCompany(LumberCompany newCompany)
         {
+            newCompany.ID = GetRecentCompanyID();
+            if (newCompany.ID == -1)
+                return -1;
+
             string query = String.Format("INSERT INTO COMPANY " +
-            "VALUES('{0}', '{1}','{2}','{3}','{4}','{5}', '{6}')",
+            "VALUES('{0}', '{1}','{2}','{3}','{4}','{5}', '{6}', '{7}')",
             newCompany.username, newCompany.HashPass, newCompany.ID,
-            newCompany.Phonenum, newCompany.name, newCompany.Address);
+            newCompany.Phonenum, newCompany.name, newCompany.Address, newCompany.NumEmployees);
 
             return _database.ExecuteQuery_NoReturnType(query);
         }
@@ -65,10 +77,14 @@ namespace Database_Helpers
         /// <returns> 0 is successfull, 1 if fail </returns>
         public int AddHardwarStore(HardwareStore newStore)
         {
+            newStore.ID = GetRecentCompanyID();
+            if (newStore.ID == -1)
+                return -1;
+
             string query = String.Format("INSERT INTO COMPANY " +
-            "VALUES('{0}', '{1}','{2}','{3}','{4}','{5}', '{6}')",
+            "VALUES('{0}', '{1}','{2}','{3}','{4}','{5}','{6}','{7}')",
             newStore.username, newStore.HashPass, newStore.ID,
-            newStore.Phonenum, newStore.name, newStore.Address);
+            newStore.Phonenum, newStore.name, newStore.Address, newStore.NumEmployees);
 
             return _database.ExecuteQuery_NoReturnType(query);
         }

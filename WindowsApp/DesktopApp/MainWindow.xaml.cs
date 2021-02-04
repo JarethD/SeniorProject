@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace DesktopApp
 {
     /// <summary>
@@ -31,15 +32,38 @@ namespace DesktopApp
             //LumberAssociate lumberPerson = new LumberAssociate("JarethDodson", "", 01, "Jareth Dodson", 5415554444, "Ace Hardware", 01);
             //lumberCompany.AddLA(lumberPerson);
             // = new iSqlServerDataAccess();   
-
+            //databaseAcc = new UserData();
+            
         }
 
         private void AddLumberassociate_Click(object sender, RoutedEventArgs e)
         {
+            LumberAssociate associate = new LumberAssociate("jarethDods", " ", "jd", 6655998844, "Brookings Or", "Ace Hardware");
+            //Check Username, if username is not in database, then add truckdriver 
+            //return true is successfull
+            //return false is unsuccessfull
+            databaseAcc.AddLumberAssociate(associate);
+        }
+
+        private void AddTruckdriver_Click(object sender, RoutedEventArgs e)
+        {
             TruckDriver driver = new TruckDriver("jarethdod", " ", "Jareth Dodson", 5557778899, "Arthur St.", "Brookings Lumber");
+            //Check Username, if username is not in database, then add truckdriver 
+            //return true is successfull
+            //return false is unsuccessfull
             databaseAcc.AddTruckDriver(driver);
         }
 
+        private void AddLumbercompany_Click(object sender, RoutedEventArgs e)
+        {
+            LumberCompany company = new LumberCompany("BrookLumb", " ", "Brookings Lumber", "Arthur St", 3334445566);
+            databaseAcc.AddLumberCompany(company);
+        }
 
+        private void AddHardwarestore_Click(object sender, RoutedEventArgs e)
+        {
+            HardwareStore store = new HardwareStore("BrookAce", " ", "Ace Hardware", "327 Checto Rd.", 0099887766);
+            databaseAcc.AddHardwarStore(store);
+        }
     }
 }
