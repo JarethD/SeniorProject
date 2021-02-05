@@ -141,7 +141,7 @@ namespace Database_Helpers
         /// </returns>
         public static string GetConnectionString()
         {
-            return "server=" + ServerAddress + ", " + ServerPort + "; database=" + ServerDatabaseName + "; UID=" + ServerUsername + "; password=" + ServerPassword;
+            return "server=" + ServerAddress + "; database=" + ServerDatabaseName + "; UID=" + ServerUsername + "; password=" + ServerPassword;
         }
 
         public int ExecuteQuery_NoReturnType(string sql)

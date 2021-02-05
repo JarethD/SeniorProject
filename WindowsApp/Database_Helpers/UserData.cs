@@ -53,9 +53,9 @@ namespace Database_Helpers
         {
             string query = String.Format("INSERT INTO [dbo].[Employees] " +
             "VALUES");
-            string values = string.Format("'{0}', '{1}','{2}',",
+            string values = string.Format(" ('{0}', '{1}','{2}',",
                 newLA.username, newLA.HashPass, newLA.name);
-            string values2 = string.Format("'{0}', '{1}','{2}'," +
+            string values2 = string.Format("{0}, {1},'{2}'," +
                 "'{3}')", newLA.ID, newLA.Phonenum, newLA.Company, newLA.Address);
             query += values;
             query += values2;
