@@ -29,3 +29,8 @@ C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\obj\Debug\DesktopApp.csproj.Cor
 C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\obj\Debug\DesktopApp.csproj.CopyComplete
 C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\obj\Debug\DesktopApp.exe
 C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\obj\Debug\DesktopApp.pdb
+C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\bin\Debug\CommonServiceLocator.dll
+C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\bin\Debug\Core.dll
+C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\bin\Debug\Database_Helpers.dll
+C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\bin\Debug\Core.pdb
+C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\bin\Debug\Database_Helpers.pdb

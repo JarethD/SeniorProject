@@ -1,16 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using DesktopApp;
+using Core.Interfaces;
+using Core.Classes;
+
 
 namespace Database_Helpers
 {
     public class UserData : iUserData
     {
         private iSqlServerDataAccess _database;
+        private SqlServerDataAccess _db;
         public UserData(iSqlServerDataAccess database)
         {
             _database = database;
+        }
+
+        public UserData(SqlServerDataAccess database)
+        {
+            _db = database;
         }
 
         public int GetRecentCompanyID()
@@ -33,7 +41,7 @@ namespace Database_Helpers
                 newDriver.username, newDriver.HashPass, newDriver.name, newDriver.ID,
                 newDriver.Phonenum, newDriver.Address, newDriver.Company);
 
-            return _database.ExecuteQuery_NoReturnType(query);
+            return _db.ExecuteQuery_NoReturnType(query);
         }
 
         /// <summary>
@@ -43,12 +51,15 @@ namespace Database_Helpers
         /// <returns> 0 is successfull, 1 if fail </returns>
         public int AddLumberAssociate(LumberAssociate newLA)
         {
-            string query = String.Format("INSERT INTO Employees " +
-            "VALUES('{0}', '{1}','{2}','{3}','{4}','{5}', '{6}', '(7}')",
-            newLA.username, newLA.HashPass, newLA.ID,
-            newLA.Phonenum, newLA.Company, newLA.Address, newLA.Company);
-
-            return _database.ExecuteQuery_NoReturnType(query);
+            string query = String.Format("INSERT INTO [dbo].[Employees] " +
+            "VALUES");
+            string values = string.Format("'{0}', '{1}','{2}',",
+                newLA.username, newLA.HashPass, newLA.name);
+            string values2 = string.Format("'{0}', '{1}','{2}'," +
+                "'{3}')", newLA.ID, newLA.Phonenum, newLA.Company, newLA.Address);
+            query += values;
+            query += values2;
+            return _db.ExecuteQuery_NoReturnType(query);
         }
 
         /// <summary>
@@ -67,7 +78,7 @@ namespace Database_Helpers
             newCompany.username, newCompany.HashPass, newCompany.ID,
             newCompany.Phonenum, newCompany.name, newCompany.Address, newCompany.NumEmployees);
 
-            return _database.ExecuteQuery_NoReturnType(query);
+            return _db.ExecuteQuery_NoReturnType(query);
         }
 
         /// <summary>
@@ -75,7 +86,7 @@ namespace Database_Helpers
         /// </summary>
         /// <param name="newStore"> Lumber Associate to be added to database</param>
         /// <returns> 0 is successfull, 1 if fail </returns>
-        public int AddHardwarStore(HardwareStore newStore)
+        public int AddHardwareStore(HardwareStore newStore)
         {
             newStore.ID = GetRecentCompanyID();
             if (newStore.ID == -1)
@@ -86,7 +97,7 @@ namespace Database_Helpers
             newStore.username, newStore.HashPass, newStore.ID,
             newStore.Phonenum, newStore.name, newStore.Address, newStore.NumEmployees);
 
-            return _database.ExecuteQuery_NoReturnType(query);
+            return _db.ExecuteQuery_NoReturnType(query);
         }
 
         //public TruckDriver GetDriver(string username)

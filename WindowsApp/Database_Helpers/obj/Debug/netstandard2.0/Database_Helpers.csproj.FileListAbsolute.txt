@@ -1,4 +1,12 @@
-C:\Users\Jareth\Desktop\sp\WindowsApp\Database_Helpers\bin\Debug\netstandard2.0\DesktopApp.exe
 C:\Users\Jareth\Desktop\sp\WindowsApp\Database_Helpers\obj\Debug\netstandard2.0\Database_Helpers.csprojAssemblyReference.cache
 C:\Users\Jareth\Desktop\sp\WindowsApp\Database_Helpers\obj\Debug\netstandard2.0\Database_Helpers.AssemblyInfoInputs.cache
 C:\Users\Jareth\Desktop\sp\WindowsApp\Database_Helpers\obj\Debug\netstandard2.0\Database_Helpers.AssemblyInfo.cs
+C:\Users\Jareth\Desktop\sp\WindowsApp\Database_Helpers\bin\Debug\netstandard2.0\Database_Helpers.deps.json
+C:\Users\Jareth\Desktop\sp\WindowsApp\Database_Helpers\bin\Debug\netstandard2.0\Database_Helpers.dll
+C:\Users\Jareth\Desktop\sp\WindowsApp\Database_Helpers\bin\Debug\netstandard2.0\Database_Helpers.pdb
+C:\Users\Jareth\Desktop\sp\WindowsApp\Database_Helpers\bin\Debug\netstandard2.0\Core.dll
+C:\Users\Jareth\Desktop\sp\WindowsApp\Database_Helpers\bin\Debug\netstandard2.0\Core.pdb
+C:\Users\Jareth\Desktop\sp\WindowsApp\Database_Helpers\obj\Debug\netstandard2.0\Database_Helpers.csproj.CoreCompileInputs.cache
+C:\Users\Jareth\Desktop\sp\WindowsApp\Database_Helpers\obj\Debug\netstandard2.0\Database_Helpers.csproj.CopyComplete
+C:\Users\Jareth\Desktop\sp\WindowsApp\Database_Helpers\obj\Debug\netstandard2.0\Database_Helpers.dll
+C:\Users\Jareth\Desktop\sp\WindowsApp\Database_Helpers\obj\Debug\netstandard2.0\Database_Helpers.pdb

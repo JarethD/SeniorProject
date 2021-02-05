@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "4ifR+VU7VMqv/e9OCDrBjvvMbc5Yi9/kE1ypSKBk7sJIEIF+EDu1tJ6AeBYaDjNoT/RGXR/Ps0W23fUSR4F7Og==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Jareth\\Desktop\\sp\\WindowsApp\\Core\\Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jareth\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Jareth\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

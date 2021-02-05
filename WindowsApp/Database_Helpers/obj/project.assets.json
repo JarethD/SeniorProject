@@ -218,13 +218,14 @@
           }
         }
       },
-      "DesktopApp/1.0.0": {
+      "Core/1.0.0": {
         "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
         "compile": {
-          "bin/placeholder/DesktopApp.dll": {}
+          "bin/placeholder/Core.dll": {}
         },
         "runtime": {
-          "bin/placeholder/DesktopApp.dll": {}
+          "bin/placeholder/Core.dll": {}
         }
       }
     }
@@ -857,15 +858,15 @@
         "version.txt"
       ]
     },
-    "DesktopApp/1.0.0": {
+    "Core/1.0.0": {
       "type": "project",
-      "path": "../DesktopApp/DesktopApp.csproj",
-      "msbuildProject": "../DesktopApp/DesktopApp.csproj"
+      "path": "../Core/Core.csproj",
+      "msbuildProject": "../Core/Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "DesktopApp >= 1.0.0",
+      "Core >= 1.0.0",
       "NETStandard.Library >= 2.0.3",
       "System.Data.SqlClient >= 4.8.2"
     ]
@@ -902,8 +903,8 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "C:\\Users\\Jareth\\Desktop\\sp\\WindowsApp\\DesktopApp\\DesktopApp.csproj": {
-              "projectPath": "C:\\Users\\Jareth\\Desktop\\sp\\WindowsApp\\DesktopApp\\DesktopApp.csproj"
+            "C:\\Users\\Jareth\\Desktop\\sp\\WindowsApp\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\Jareth\\Desktop\\sp\\WindowsApp\\Core\\Core.csproj"
             }
           }
         }

@@ -4,7 +4,9 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DesktopApp;
+//using DesktopApp;
+using Core.Interfaces;
+using Core.Classes;
 
 namespace Database_Helpers
 {

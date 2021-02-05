@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace DesktopApp
+using Core.Classes;
+namespace Core.Interfaces
 {
     public interface iSqlServerDataAccess
     {
@@ -16,4 +16,6 @@ namespace DesktopApp
         HardwareStore ExecuteQuery_SingleHS(string sql);
 
     }
+
+
 }

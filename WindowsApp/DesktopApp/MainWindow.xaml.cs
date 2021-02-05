@@ -12,7 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using Database_Helpers;
+using Core.Classes;
+using Core.Interfaces;
+using CommonServiceLocator;
 
 namespace DesktopApp
 {
@@ -22,9 +25,11 @@ namespace DesktopApp
     public partial class MainWindow : Window
     {
         //iSqlServerDataAccess databaseAccess;
-        iUserData databaseAcc;
-        
-        
+        //iUserData databaseAcc;
+        //iSqlServerDataAccess dataAccess;
+        UserData databaseAccess;
+        iSqlServerDataAccess dbac;
+        SqlServerDataAccess dbac2;
         public MainWindow()
         {
             InitializeComponent();
@@ -33,7 +38,8 @@ namespace DesktopApp
             //lumberCompany.AddLA(lumberPerson);
             // = new iSqlServerDataAccess();   
             //databaseAcc = new UserData();
-            
+            dbac2 = new SqlServerDataAccess();
+            databaseAccess = new UserData(dbac2);
         }
 
         private void AddLumberassociate_Click(object sender, RoutedEventArgs e)
@@ -42,7 +48,7 @@ namespace DesktopApp
             //Check Username, if username is not in database, then add truckdriver 
             //return true is successfull
             //return false is unsuccessfull
-            databaseAcc.AddLumberAssociate(associate);
+            databaseAccess.AddLumberAssociate(associate);
         }
 
         private void AddTruckdriver_Click(object sender, RoutedEventArgs e)
@@ -51,19 +57,19 @@ namespace DesktopApp
             //Check Username, if username is not in database, then add truckdriver 
             //return true is successfull
             //return false is unsuccessfull
-            databaseAcc.AddTruckDriver(driver);
+            databaseAccess.AddTruckDriver(driver);
         }
 
         private void AddLumbercompany_Click(object sender, RoutedEventArgs e)
         {
             LumberCompany company = new LumberCompany("BrookLumb", " ", "Brookings Lumber", "Arthur St", 3334445566);
-            databaseAcc.AddLumberCompany(company);
+            databaseAccess.AddLumberCompany(company);
         }
 
         private void AddHardwarestore_Click(object sender, RoutedEventArgs e)
         {
             HardwareStore store = new HardwareStore("BrookAce", " ", "Ace Hardware", "327 Checto Rd.", 0099887766);
-            databaseAcc.AddHardwarStore(store);
+            databaseAccess.AddHardwareStore(store);
         }
     }
 }
