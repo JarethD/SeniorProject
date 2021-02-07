@@ -24,7 +24,7 @@ namespace Database_Helpers
         public int GetRecentCompanyID()
         {
             string query = String.Format("SELECT MAX(ID) FROM COMPANY");
-            int newID = _database.ExecuteQuery_SingleID(query);
+            int newID = _db.ExecuteQuery_SingleID(query);
             return ++newID;
         }
 
@@ -73,16 +73,16 @@ namespace Database_Helpers
         /// <returns> 0 is successfull, 1 if fail </returns>
         public int AddLumberCompany(LumberCompany newCompany)
         {
-            newCompany.ID = GetRecentCompanyID();
-            if (newCompany.ID == -1)
-                return -1;
+            //newCompany.ID = GetRecentCompanyID();
+            //if (newCompany.ID == -1)
+            //    return -1;
 
-            string query = String.Format("INSERT INTO [dbo].[Employees] " +
+            string query = String.Format("INSERT INTO [dbo].[Company] " +
             "VALUES");
-            string values = string.Format(" ('{0}', '{1}','{2}',",
-                newCompany.username, newCompany.HashPass, newCompany.name);
-            string values2 = string.Format("{0}, {1},'{2}'," +
-                "'{3}')", newCompany.ID, newCompany.Phonenum,  newCompany.Address, newCompany.NumEmployees);
+            string values = string.Format(" ('{0}', '{1}',{2},",
+                newCompany.username, newCompany.HashPass, newCompany.ID);
+            string values2 = string.Format("{0}, '{1}','{2}')", 
+                newCompany.Phonenum, newCompany.name,  newCompany.Address);
             query += values;
             query += values2;
 
@@ -96,14 +96,27 @@ namespace Database_Helpers
         /// <returns> 0 is successfull, 1 if fail </returns>
         public int AddHardwareStore(HardwareStore newStore)
         {
-            newStore.ID = GetRecentCompanyID();
+            /*newStore.ID = GetRecentCompanyID();
             if (newStore.ID == -1)
                 return -1;
+            */
+            string query = String.Format("INSERT INTO [dbo].[Company] " +
+            "VALUES");
+            string values = string.Format(" ('{0}', '{1}',{2},",
+                newStore.username, newStore.HashPass, newStore.ID);
+            string values2 = string.Format("{0}, '{1}','{2}')",
+                newStore.Phonenum, newStore.name, newStore.Address);
+            query += values;
+            query += values2;
+            return _db.ExecuteQuery_NoReturnType(query);
+        }
 
-            string query = String.Format("INSERT INTO COMPANY " +
-            "VALUES('{0}', '{1}','{2}','{3}','{4}','{5}','{6}','{7}')",
-            newStore.username, newStore.HashPass, newStore.ID,
-            newStore.Phonenum, newStore.name, newStore.Address, newStore.NumEmployees);
+        public int AddOrder(Order order)
+        {
+            string query = String.Format("INSERT INTO ORDER VALUES" +
+                "{0}, {1}, {2}, {3}, {4}, {5}, {6}",
+                order.m_oID, order.m_oDescription, order.m_oLocationTo,
+                order.m_oLocationFrom, (int)order.m_oStatus, (int)order.m_oPriority);
 
             return _db.ExecuteQuery_NoReturnType(query);
         }
