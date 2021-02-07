@@ -68,5 +68,12 @@ namespace DesktopApp
             HardwareStore store = new HardwareStore("BrookAce", " ", "Ace Hardware", "327 Checto Rd.", 0099887766);
             databaseAccess.AddHardwareStore(store);
         }
+
+        private void AddOrder_Click(object sender, RoutedEventArgs e)
+        {
+            Order order = new Order("Order 1", "12 - 2x4x6 / 6 - 4x4x8", "Crescent City Lumber", "Cascade HC", status.PROGRESS, priority.MEDIUM);
+            order.m_oID = 0;
+            databaseAccess.AddOrder(order);
+        }
     }
 }

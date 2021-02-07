@@ -113,8 +113,8 @@ namespace Database_Helpers
 
         public int AddOrder(Order order)
         {
-            string query = String.Format("INSERT INTO ORDER VALUES" +
-                "{0}, {1}, {2}, {3}, {4}, {5}, {6}",
+            string query = String.Format("INSERT INTO [dbo].[Orders] VALUES" +
+                " ({0}, '{1}', '{2}', '{3}', {4}, {5})",
                 order.m_oID, order.m_oDescription, order.m_oLocationTo,
                 order.m_oLocationFrom, (int)order.m_oStatus, (int)order.m_oPriority);
 
