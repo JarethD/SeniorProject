@@ -24,9 +24,6 @@ namespace DesktopApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        //iSqlServerDataAccess databaseAccess;
-        //iUserData databaseAcc;
-        //iSqlServerDataAccess dataAccess;
         UserData databaseAccess;
         iSqlServerDataAccess dbac;
         SqlServerDataAccess dbac2;
@@ -44,7 +41,7 @@ namespace DesktopApp
 
         private void AddLumberassociate_Click(object sender, RoutedEventArgs e)
         {
-            LumberAssociate associate = new LumberAssociate("jarethDods", " ", "jd", 6655998844, "Brookings Or", "Ace Hardware");
+            LumberAssociate associate = new LumberAssociate("raulg", " ", "Raul Gonzalez", 1234567891, "Arthur St.", "Cascape HC");
             //Check Username, if username is not in database, then add truckdriver 
             //return true is successfull
             //return false is unsuccessfull
@@ -53,7 +50,7 @@ namespace DesktopApp
 
         private void AddTruckdriver_Click(object sender, RoutedEventArgs e)
         {
-            TruckDriver driver = new TruckDriver("jarethdod", " ", "Jareth Dodson", 5557778899, "Arthur St.", "Brookings Lumber");
+            TruckDriver driver = new TruckDriver("raulg", " ", "Raul Gonzalez", 1234567891, "Arthur St.", "Cascape HC");
             //Check Username, if username is not in database, then add truckdriver 
             //return true is successfull
             //return false is unsuccessfull

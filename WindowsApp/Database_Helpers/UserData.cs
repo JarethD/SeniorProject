@@ -36,10 +36,14 @@ namespace Database_Helpers
         public int AddTruckDriver(TruckDriver newDriver)
         {
 
-            string query = String.Format("INSERT INTO Employees " +
-                "VALUES('{0}', '{1}','{2}','{3}','{4}','{5}', '{6}', '{7}')",
-                newDriver.username, newDriver.HashPass, newDriver.name, newDriver.ID,
-                newDriver.Phonenum, newDriver.Address, newDriver.Company);
+            string query = String.Format("INSERT INTO [dbo].[Employees] " +
+ "VALUES");
+            string values = string.Format(" ('{0}', '{1}','{2}',",
+                newDriver.username, newDriver.HashPass, newDriver.name);
+            string values2 = string.Format("{0}, {1},'{2}'," +
+                "'{3}')", newDriver.ID, newDriver.Phonenum, newDriver.Company, newDriver.Address);
+            query += values;
+            query += values2;
 
             return _db.ExecuteQuery_NoReturnType(query);
         }
@@ -73,10 +77,14 @@ namespace Database_Helpers
             if (newCompany.ID == -1)
                 return -1;
 
-            string query = String.Format("INSERT INTO COMPANY " +
-            "VALUES('{0}', '{1}','{2}','{3}','{4}','{5}', '{6}', '{7}')",
-            newCompany.username, newCompany.HashPass, newCompany.ID,
-            newCompany.Phonenum, newCompany.name, newCompany.Address, newCompany.NumEmployees);
+            string query = String.Format("INSERT INTO [dbo].[Employees] " +
+            "VALUES");
+            string values = string.Format(" ('{0}', '{1}','{2}',",
+                newCompany.username, newCompany.HashPass, newCompany.name);
+            string values2 = string.Format("{0}, {1},'{2}'," +
+                "'{3}')", newCompany.ID, newCompany.Phonenum,  newCompany.Address, newCompany.NumEmployees);
+            query += values;
+            query += values2;
 
             return _db.ExecuteQuery_NoReturnType(query);
         }
