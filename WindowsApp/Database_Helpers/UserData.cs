@@ -149,5 +149,11 @@ namespace Database_Helpers
             oldTD.username);
             return _db.ExecuteQuery_NoReturnType(query);
         }
+
+        public int DeletOrder(Order oldOrder)
+        {
+            string query = String.Format("DELETE FROM [dbo].[Orders] WHERE OrderID={0}", oldOrder.m_oID);
+            return _db.ExecuteQuery_NoReturnType(query);
+        }
     }
 }
