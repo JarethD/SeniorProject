@@ -12,6 +12,7 @@ namespace Core.Classes
     {
         // Order ID represents ID of a truck driver that creates order 
         //Change ID name?
+        public int m_oDriverID { get; set; }
         public int m_oID { get; set; }
         public string m_oName { get; set; }
         public string m_oDescription { get; set; }

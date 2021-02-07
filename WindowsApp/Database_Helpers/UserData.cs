@@ -81,8 +81,8 @@ namespace Database_Helpers
             "VALUES");
             string values = string.Format(" ('{0}', '{1}',{2},",
                 newCompany.username, newCompany.HashPass, newCompany.ID);
-            string values2 = string.Format("{0}, '{1}','{2}')", 
-                newCompany.Phonenum, newCompany.name,  newCompany.Address);
+            string values2 = string.Format("{0}, '{1}','{2}')",
+                newCompany.Phonenum, newCompany.name, newCompany.Address);
             query += values;
             query += values2;
 
@@ -122,7 +122,32 @@ namespace Database_Helpers
         }
 
         //public TruckDriver GetDriver(string username)
-        
+        public int DeleteHardwareStore(HardwareStore oldStore)
+        {
+            string query = String.Format("DELETE FROM [dbo].[Company] WHERE Username='{0}'" +
+                oldStore.username);
+            return _db.ExecuteQuery_NoReturnType(query);
+        }
 
+        public int DeleteLumberCompany(LumberCompany oldCompany)
+        {
+            string query = String.Format("DELETE FROM [dbo].[Company] WHERE Username='{0}'" +
+            oldCompany.username);
+            return _db.ExecuteQuery_NoReturnType(query);
+        }
+
+        public int DeleteLumberAssociate(LumberAssociate oldLA)
+        {
+            string query = String.Format("DELETE FROM [dbo].[Employees] WHERE Username='{0}'" +
+            oldLA.username);
+            return _db.ExecuteQuery_NoReturnType(query);
+        }
+
+        public int DeleteTruckDriver(TruckDriver oldTD)
+        {
+            string query = String.Format("DELETE FROM [dbo].[Employees] WHERE Username='{0}'" +
+            oldTD.username);
+            return _db.ExecuteQuery_NoReturnType(query);
+        }
     }
 }
