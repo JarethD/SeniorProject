@@ -80,6 +80,14 @@ namespace DesktopApp {
         #line default
         #line hidden
         
+        
+        #line 19 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button DeleteHardwareStore;
+        
+        #line default
+        #line hidden
+        
         private bool _contentLoaded;
         
         /// <summary>
@@ -154,6 +162,9 @@ namespace DesktopApp {
             
             #line default
             #line hidden
+            return;
+            case 6:
+            this.DeleteHardwareStore = ((System.Windows.Controls.Button)(target));
             return;
             }
             this._contentLoaded = true;

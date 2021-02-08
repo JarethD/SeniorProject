@@ -6,14 +6,17 @@
         xmlns:local="clr-namespace:DesktopApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="600">
-    <StackPanel>
-        <StackPanel HorizontalAlignment="Left">
+    <StackPanel Orientation="Horizontal">
+        <StackPanel HorizontalAlignment="Left" Margin="5,5,5,5">
             <Button x:Name="AddHardwarestore" Content="Add HS"   Click="AddHardwarestore_Click"/>
             <Button x:Name="AddLumberassociate" Content="Add la" Click="AddLumberassociate_Click"/>
             <Button x:Name="AddLumbercompany" Content="Add lc"   Click="AddLumbercompany_Click"/>
             <Button x:Name="AddTruckdriver" Content="Add td"   Click="AddTruckdriver_Click"/>
             <Button x:Name="AddOrder" Content="Add Order" Click="AddOrder_Click" />
             
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Right" Margin="5,5,5,5">
+            <Button x:Name="DeleteHardwareStore" Content="Delete Store" Click="DeleteHardwareStore_Click"/>
         </StackPanel>
     </StackPanel>
 </Window>

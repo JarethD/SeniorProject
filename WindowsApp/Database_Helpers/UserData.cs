@@ -124,29 +124,29 @@ namespace Database_Helpers
         //public TruckDriver GetDriver(string username)
         public int DeleteHardwareStore(HardwareStore oldStore)
         {
-            string query = String.Format("DELETE FROM [dbo].[Company] WHERE Username='{0}'" +
-                oldStore.username);
+            string query = String.Format("DELETE FROM [dbo].[Company] WHERE Username='{0}' AND ID={2}" +
+                oldStore.username, oldStore.ID);
             return _db.ExecuteQuery_NoReturnType(query);
         }
 
         public int DeleteLumberCompany(LumberCompany oldCompany)
         {
-            string query = String.Format("DELETE FROM [dbo].[Company] WHERE Username='{0}'" +
-            oldCompany.username);
+            string query = String.Format("DELETE FROM [dbo].[Company] WHERE Username='{0}' AND ID={2}" +
+            oldCompany.username, oldCompany.ID);
             return _db.ExecuteQuery_NoReturnType(query);
         }
 
         public int DeleteLumberAssociate(LumberAssociate oldLA)
         {
-            string query = String.Format("DELETE FROM [dbo].[Employees] WHERE Username='{0}'" +
-            oldLA.username);
+            string query = String.Format("DELETE FROM [dbo].[Employees] WHERE Username='{0}' AND ID={2}" +
+            oldLA.username, oldLA.ID);
             return _db.ExecuteQuery_NoReturnType(query);
         }
 
         public int DeleteTruckDriver(TruckDriver oldTD)
         {
-            string query = String.Format("DELETE FROM [dbo].[Employees] WHERE Username='{0}'" +
-            oldTD.username);
+            string query = String.Format("DELETE FROM [dbo].[Employees] WHERE Username='{0}' AND ID={2}" +
+            oldTD.username, oldTD.ID);
             return _db.ExecuteQuery_NoReturnType(query);
         }
 

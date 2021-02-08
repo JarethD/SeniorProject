@@ -75,5 +75,11 @@ namespace DesktopApp
             order.m_oID = 0;
             databaseAccess.AddOrder(order);
         }
+
+        private void DeleteHardwareStore_Click(object sender, RoutedEventArgs e)
+        {
+            HardwareStore store = new HardwareStore("BrookAce", " ", "Ace Hardware", "327 Checto Rd.", 0099887766);
+            databaseAccess.DeleteHardwareStore(store);
+        }
     }
 }
