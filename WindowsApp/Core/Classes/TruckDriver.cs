@@ -56,6 +56,13 @@ namespace Core.Classes
             get => m_trOrders;
             set => m_trOrders = Orders;
         }
+
+        private long m_trCompID;
+        public long CompID
+        {
+            get => m_trCompID;
+            set => m_trCompID = CompID;
+        }
         public TruckDriver()
         { }
         public TruckDriver(string username, string hashpass, string name, long phonenum, string address, string company)

@@ -173,7 +173,10 @@ namespace Database_Helpers
                 int userID = 0;
                 string userName = "";
                 string hash = "";
-
+                long phonenumber = 00000000000;
+                string name = "";
+                string address = "";
+                long compid = 0;
                 try { con.Open(); }
                 catch (Exception) { return null; }
 
@@ -185,7 +188,11 @@ namespace Database_Helpers
                     {
                         userName = read.GetString(0);
                         hash = read.GetString(1);
-                        userID = read.GetInt32(2);
+                        name = read.GetString(2);
+                        userID = read.GetInt32(3);
+                        phonenumber = read.GetInt64(4);
+                        address = read.GetString(5);
+                        compid = read.GetInt64(6);
                     }
 
                     read.Close();
@@ -198,6 +205,10 @@ namespace Database_Helpers
                     ID = userID,
                     username = userName,
                     HashPass = hash,
+                    CompID = compid,
+                    Address = address,
+                    Phonenum = phonenumber,
+                    name = name,        // Wouldn't hurt to change truck driver variable to Name
                     Orders = new List<Order>()
                 };
                 return td;
@@ -213,7 +224,10 @@ namespace Database_Helpers
                 int userID = 0;
                 string userName = "";
                 string hash = "";
-
+                long phonenumber = 00000000000;
+                string name = "";
+                string address = "";
+                long compid = 0;
                 try { con.Open(); }
                 catch (Exception) { return null; }
 
@@ -225,7 +239,11 @@ namespace Database_Helpers
                     {
                         userName = read.GetString(0);
                         hash = read.GetString(1);
-                        userID = read.GetInt32(2);
+                        name = read.GetString(2);
+                        userID = read.GetInt32(3);
+                        phonenumber = read.GetInt64(4);
+                        address = read.GetString(5);
+                        compid = read.GetInt64(6);
                     }
 
                     read.Close();
@@ -238,6 +256,10 @@ namespace Database_Helpers
                     ID = userID,
                     username = userName,
                     HashPass = hash,
+                    name = name,
+                    Phonenum = phonenumber,
+                    Address = address,
+                    laCompanyID = ID,
                     Orders = new List<Order>()
                 };
                 return la;
