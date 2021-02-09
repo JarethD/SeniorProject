@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Core.Classes
 {
-    public class LumberAssociate : Order
+    public class LumberAssociate
     {
         private string m_laUsername;
         public string username
@@ -20,8 +20,8 @@ namespace Core.Classes
             get => m_laHashPass;
             set => m_laHashPass = HashPass;
         }
-        private int m_laID;
-        public int ID
+        public long m_laID;
+        public long ID
         {
             get => m_laID;
             set => m_laID = ID;
@@ -52,8 +52,8 @@ namespace Core.Classes
             set => m_laOrders = Orders;
         }
 
-        private int m_laCompanyID;
-        public int laCompanyID
+        public long m_laCompanyID;
+        public long laCompanyID
         {
             get => m_laCompanyID;
             set => m_laCompanyID = laCompanyID;

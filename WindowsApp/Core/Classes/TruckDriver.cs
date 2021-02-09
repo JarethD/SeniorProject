@@ -44,8 +44,8 @@ namespace Core.Classes
             get => m_trCompany;
             set => m_trCompany = Company;
         }
-        private int m_trID;
-        public int ID
+        public long m_trID;
+        public long ID
         {
             get => m_trID;
             set => m_trID = ID;

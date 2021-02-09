@@ -30,7 +30,7 @@ namespace Database_Helpers
 
         public long GetRecentEmployeeID()
         {
-            string query = String.Format("SELECT MAX(ID) FROM Employee");
+            string query = String.Format("SELECT MAX(ID) FROM Employees");
             long newID = _db.ExecuteQuery_SingleID(query);
             return ++newID;
         }
@@ -41,13 +41,17 @@ namespace Database_Helpers
         /// <returns> 0 is successfull, 1 if fail </returns>
         public int AddTruckDriver(TruckDriver newDriver)
         {
+            long newID = GetRecentEmployeeID();
+            newDriver.m_trID = newID;
+            //if ((newDriver.ID - 1) == -1)
+            //    return -1;
 
             string query = String.Format("INSERT INTO [dbo].[Employees] " +
  "VALUES");
             string values = string.Format(" ('{0}', '{1}','{2}',",
                 newDriver.username, newDriver.HashPass, newDriver.name);
-            string values2 = string.Format("{0}, {1},'{2}'," +
-                "'{3}')", newDriver.ID, newDriver.Phonenum, newDriver.Company, newDriver.Address);
+            string values2 = string.Format("{0}, {1},'{2}', {3})", 
+                newDriver.ID, newDriver.Phonenum, newDriver.Address, newDriver.CompID );
             query += values;
             query += values2;
 
@@ -61,12 +65,17 @@ namespace Database_Helpers
         /// <returns> 0 is successfull, 1 if fail </returns>
         public int AddLumberAssociate(LumberAssociate newLA)
         {
+            long newID = GetRecentEmployeeID();
+            newLA.m_laID = newID;
+            //if ((newLA.ID - 1) == -1)
+            //    return -1;
+
             string query = String.Format("INSERT INTO [dbo].[Employees] " +
             "VALUES");
             string values = string.Format(" ('{0}', '{1}','{2}',",
                 newLA.username, newLA.HashPass, newLA.name);
-            string values2 = string.Format("{0}, {1},'{2}'," +
-                "'{3}')", newLA.ID, newLA.Phonenum, newLA.Company, newLA.Address);
+            string values2 = string.Format("{0}, {1},'{2}',{3})", 
+                newLA.ID, newLA.Phonenum,  newLA.Address, newLA.laCompanyID);
             query += values;
             query += values2;
             return _db.ExecuteQuery_NoReturnType(query);
