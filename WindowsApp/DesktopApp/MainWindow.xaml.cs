@@ -78,8 +78,27 @@ namespace DesktopApp
 
         private void DeleteHardwareStore_Click(object sender, RoutedEventArgs e)
         {
-            HardwareStore store = new HardwareStore("BrookAce", " ", "Ace Hardware", "327 Checto Rd.", 0099887766);
-            databaseAccess.DeleteHardwareStore(store);
+            //HardwareStore store = new HardwareStore("BrookAce", " ", "Ace Hardware", "327 Checto Rd.", 0099887766);
+            long id = databaseAccess.GetRecentCompanyID();
+            databaseAccess.DeleteHardwareStore(id);
+        }
+
+        private void DeleteLumberAssociate_Click(object sender, RoutedEventArgs e)
+        {
+            long id = databaseAccess.GetRecentEmployeeID();
+            databaseAccess.DeleteLumberAssociate(id);
+        }
+
+        private void DeleteLumberCompany_Click(object sender, RoutedEventArgs e)
+        {
+            long id = databaseAccess.GetRecentCompanyID();
+            databaseAccess.DeleteLumberAssociate(id);
+        }
+
+        private void DeleteTruckDriver_Click(object sender, RoutedEventArgs e)
+        {
+            long id = databaseAccess.GetRecentEmployeeID();
+            databaseAccess.DeleteTruckDriver(id);
         }
     }
 }

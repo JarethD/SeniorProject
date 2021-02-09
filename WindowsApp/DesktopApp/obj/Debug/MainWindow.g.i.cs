@@ -88,6 +88,30 @@ namespace DesktopApp {
         #line default
         #line hidden
         
+        
+        #line 20 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button DeleteLumberAssociate;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 21 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button DeleteLumberCompany;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 22 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button DeleteTruckDriver;
+        
+        #line default
+        #line hidden
+        
         private bool _contentLoaded;
         
         /// <summary>
@@ -171,6 +195,15 @@ namespace DesktopApp {
             
             #line default
             #line hidden
+            return;
+            case 7:
+            this.DeleteLumberAssociate = ((System.Windows.Controls.Button)(target));
+            return;
+            case 8:
+            this.DeleteLumberCompany = ((System.Windows.Controls.Button)(target));
+            return;
+            case 9:
+            this.DeleteTruckDriver = ((System.Windows.Controls.Button)(target));
             return;
             }
             this._contentLoaded = true;
