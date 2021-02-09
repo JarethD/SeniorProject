@@ -346,15 +346,14 @@ namespace Database_Helpers
             }
         }
 
-        public int ExecuteQuery_SingleID(string sql)
+        public long ExecuteQuery_SingleID(string sql)
         {
             using (SqlConnection con = new SqlConnection(GetConnectionString()))
             {
                 SqlCommand com = new SqlCommand(sql, con);
 
-                int userID = 0;
-                string userName = "";
-                string hash = "";
+                long userID = 0;
+
 
                 try { con.Open(); }
                 catch (Exception) { return -1; }
@@ -365,9 +364,7 @@ namespace Database_Helpers
 
                     if (read.Read())
                     {
-                        userName = read.GetString(0);
-                        hash = read.GetString(1);
-                        userID = read.GetInt32(2);
+                        userID = read.GetInt64(0);
                     }
 
                     read.Close();

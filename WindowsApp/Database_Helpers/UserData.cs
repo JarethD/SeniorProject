@@ -21,13 +21,19 @@ namespace Database_Helpers
             _db = database;
         }
 
-        public int GetRecentCompanyID()
+        public long GetRecentCompanyID()
         {
-            string query = String.Format("SELECT MAX(ID) FROM COMPANY");
-            int newID = _db.ExecuteQuery_SingleID(query);
+            string query = String.Format("SELECT MAX(ID) FROM Company");
+            long newID = _db.ExecuteQuery_SingleID(query);
             return ++newID;
         }
 
+        public long GetRecentEmployeeID()
+        {
+            string query = String.Format("SELECT MAX(ID) FROM Employee");
+            long newID = _db.ExecuteQuery_SingleID(query);
+            return ++newID;
+        }
         /// <summary>
         ///     Add Truck Driver to Employee table in database
         /// </summary>
@@ -73,9 +79,10 @@ namespace Database_Helpers
         /// <returns> 0 is successfull, 1 if fail </returns>
         public int AddLumberCompany(LumberCompany newCompany)
         {
-            //newCompany.ID = GetRecentCompanyID();
-            //if (newCompany.ID == -1)
-            //    return -1;
+            long newID = GetRecentCompanyID();
+            newCompany.m_lcID = newID;
+            if ((newCompany.ID - 1) == -1)
+                return -1;
 
             string query = String.Format("INSERT INTO [dbo].[Company] " +
             "VALUES");
@@ -96,10 +103,11 @@ namespace Database_Helpers
         /// <returns> 0 is successfull, 1 if fail </returns>
         public int AddHardwareStore(HardwareStore newStore)
         {
-            /*newStore.ID = GetRecentCompanyID();
-            if (newStore.ID == -1)
+            long newID = GetRecentCompanyID();
+            newStore.m_hsID = newID;
+            if ((newStore.ID - 1) == -1)
                 return -1;
-            */
+
             string query = String.Format("INSERT INTO [dbo].[Company] " +
             "VALUES");
             string values = string.Format(" ('{0}', '{1}',{2},",
@@ -114,9 +122,9 @@ namespace Database_Helpers
         public int AddOrder(Order order)
         {
             string query = String.Format("INSERT INTO [dbo].[Orders] VALUES" +
-                " ({0}, '{1}', '{2}', '{3}', {4}, {5})",
+                " ({0}, '{1}', '{2}', '{3}', {4}, {5}, {6})",
                 order.m_oID, order.m_oDescription, order.m_oLocationTo,
-                order.m_oLocationFrom, (int)order.m_oStatus, (int)order.m_oPriority);
+                order.m_oLocationFrom, (int)order.m_oStatus, (int)order.m_oPriority, order.m_oDriverID);
 
             return _db.ExecuteQuery_NoReturnType(query);
         }

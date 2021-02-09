@@ -50,8 +50,8 @@ namespace Core.Classes
             get => m_hsEmployees; 
             set => m_hsEmployees = hsEmployees; 
         }
-        private int m_hsID;
-        public int ID
+       public long m_hsID;
+        public long ID
         {
             get => m_hsID;
             set => m_hsID = ID;

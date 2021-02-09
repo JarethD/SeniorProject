@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Core.Classes
 {
-    public class LumberCompany : Order
+    public class LumberCompany
     {
         private string m_lcUsername;
         public string username
@@ -50,13 +50,13 @@ namespace Core.Classes
             get => m_lcEmployees; 
             set => m_lcEmployees = Employees; 
         }
-        private int m_lcID;
-        public int ID
+        //private long m_lcID;
+        public long ID
         { 
-            get => m_lcID; 
-            set => m_lcID = ID; 
+            get => m_lcID;
+            set { m_lcID = ID; } 
         }
-
+        public long m_lcID;
         public LumberCompany()
         { }
         public LumberCompany(string username, string hashpass, string companyName, string address, long phoneNum)//, int id)

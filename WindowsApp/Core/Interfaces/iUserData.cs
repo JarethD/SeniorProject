@@ -11,7 +11,8 @@ namespace Core.Interfaces
     {
 
 
-        int GetRecentCompanyID();
+        long GetRecentCompanyID();
+        long GetRecentEmployeeID();
         int AddTruckDriver(TruckDriver newDriver);
         int AddLumberAssociate(LumberAssociate newLA);
         int AddLumberCompany(LumberCompany newCompany);
