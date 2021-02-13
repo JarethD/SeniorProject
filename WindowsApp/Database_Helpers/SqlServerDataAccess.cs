@@ -368,13 +368,12 @@ namespace Database_Helpers
             }
         }
 
-        public List<Order> ExecuteQuery_GetOrderTD(TruckDriver driver)
+        public List<Order> ExecuteQuery_GetOrderTD(string sql)
         {
-            string query = "SELECT Order FROM ORDER WHERE ID = '" + driver.ID + "';";
             List<Order> returnList = new List<Order>();
             using (SqlConnection con = new SqlConnection(GetConnectionString()))
             {
-                SqlCommand com = new SqlCommand(query, con);
+                SqlCommand com = new SqlCommand(sql, con);
 
                 con.Open();
                 SqlDataReader read = com.ExecuteReader();
@@ -396,8 +395,9 @@ namespace Database_Helpers
                     LocFrom = read.GetString(3);
                     status = read.GetInt16(4);
                     priority = read.GetInt16(5);
-                    driverID = read.GetInt32(6);
-                    Order tempOrder = new Order();
+                    driverID = read.GetInt64(6);
+                    Order tempOrder = new Order(id, desc, LocTo, LocFrom, (Core.Classes.status)status, (Core.Classes.priority)priority, driverID);
+                    returnList.Add(tempOrder);
                 }
             }
             return returnList;

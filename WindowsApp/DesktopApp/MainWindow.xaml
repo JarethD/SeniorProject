@@ -29,5 +29,20 @@
             <TextBox x:Name="CompUsernameBox" />
             <TextBlock x:Name="CompUsernameText" Margin="5,5,5,5" Background="AliceBlue"/>
         </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="5,5,5,5">
+                <Button x:Name="GetOrder" Content="Get Order" Click="GetOrder_Click"/>
+                <DockPanel LastChildFill="True">
+                    <TextBlock Text="ID: " DockPanel.Dock="Left"/>
+                    <TextBox x:Name="GetOrderBox" Width="Auto"/>
+                </DockPanel>
+                <TextBlock x:Name="OrderBlock"/>
+            </StackPanel>
+            <StackPanel>
+                <Grid>
+                    <ListView Margin="10" Name="OrderList"></ListView>
+                </Grid>
+            </StackPanel>
+        </StackPanel>
     </StackPanel>
 </Window>

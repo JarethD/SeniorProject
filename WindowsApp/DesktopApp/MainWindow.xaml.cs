@@ -41,7 +41,7 @@ namespace DesktopApp
 
         private void AddLumberassociate_Click(object sender, RoutedEventArgs e)
         {
-            LumberAssociate associate = new LumberAssociate("raulg", " ", "Raul Gonzalez", 1234567891, "Arthur St.", "Cascape HC");
+            LumberAssociate associate = new LumberAssociate("raulg", " ", "Raul Gonzalez", 0, 1234567891, "Arthur St.", 1);
             //Check Username, if username is not in database, then add truckdriver 
             //return true is successfull
             //return false is unsuccessfull
@@ -72,7 +72,6 @@ namespace DesktopApp
         private void AddOrder_Click(object sender, RoutedEventArgs e)
         {
             Order order = new Order("Order 1", "12 - 2x4x6 / 6 - 4x4x8", "Crescent City Lumber", "Cascade HC", status.PROGRESS, priority.MEDIUM);
-            order.m_oID = 0;
             databaseAccess.AddOrder(order);
         }
 
@@ -116,6 +115,16 @@ namespace DesktopApp
                     CompUsernameText.Text = "Not found";
                 }
             }
+        }
+
+        private void GetOrder_Click(object sender, RoutedEventArgs e)
+        {
+            List<Order> DisplayList = new List<Order>();
+            String driveridstring = GetOrderBox.Text;
+            int driverid = Int32.Parse(driveridstring);
+            DisplayList = databaseAccess.GetOrders(driverid);
+            OrderBlock.Text = String.Format("{0}", DisplayList.Count());
+            OrderList.ItemsSource = DisplayList;
         }
     }
 }

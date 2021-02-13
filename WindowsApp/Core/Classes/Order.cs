@@ -12,8 +12,8 @@ namespace Core.Classes
     {
         // Order ID represents ID of a truck driver that creates order 
         //Change ID name?
-        public int m_oDriverID { get; set; }
-        public int m_oID { get; set; }
+        public long m_oDriverID { get; set; }
+        public long m_oID { get; set; }
         public string m_oName { get; set; }
         public string m_oDescription { get; set; }
         public string m_oLocationTo { get; set; }
@@ -34,6 +34,22 @@ namespace Core.Classes
             m_oLocationTo = locTo;
             m_oStatus = curStatus;
             m_oPriority = curPriority;
+        }
+
+        public Order(long id, string desc, string locFrom, string locTo, status curStatus, priority curPriority, long dID)
+        {
+            m_oID = id;
+            m_oDescription = desc;
+            m_oLocationFrom = locFrom;
+            m_oLocationTo = locTo;
+            m_oStatus = curStatus;
+            m_oPriority = curPriority;
+            m_oDriverID = dID;
+        }
+
+        public override string ToString()
+        {
+            return String.Format("ID: {0}, To: {1}, From: {2}", m_oID, m_oLocationTo, m_oLocationFrom);
         }
     }
 }

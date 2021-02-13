@@ -72,8 +72,7 @@ namespace Core.Classes
             m_trPhoneNum = phonenum;
             m_trAddress = address;
             m_trCompany = company;
-            //Grab greatest ID number from database and increment by and set m_trID to new ID 
-        }
+         }
 
         public TruckDriver()
         {

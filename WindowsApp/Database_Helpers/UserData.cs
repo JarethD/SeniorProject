@@ -34,6 +34,15 @@ namespace Database_Helpers
             long newID = _db.ExecuteQuery_SingleID(query);
             return ++newID;
         }
+
+        public long GetOrderID()
+        {
+            string query = string.Format("SELECT MAX(OrderID) FROM Orders");
+            long newID = _db.ExecuteQuery_SingleID(query);
+            return ++newID;
+        }
+
+        #region Add to Database
         /// <summary>
         ///     Add Truck Driver to Employee table in database
         /// </summary>
@@ -130,6 +139,8 @@ namespace Database_Helpers
 
         public int AddOrder(Order order)
         {
+            order.m_oID = GetOrderID();
+            
             string query = String.Format("INSERT INTO [dbo].[Orders] VALUES" +
                 " ({0}, '{1}', '{2}', '{3}', {4}, {5}, {6})",
                 order.m_oID, order.m_oDescription, order.m_oLocationTo,
@@ -137,6 +148,8 @@ namespace Database_Helpers
 
             return _db.ExecuteQuery_NoReturnType(query);
         }
+
+#endregion
 
         #region Deletion Functions
         public int DeleteHardwareStore(long tdID)
@@ -206,6 +219,25 @@ namespace Database_Helpers
             return _db.ExecuteQuery_SingleHS(query);
         }
 
+        public List<Order> GetOrders(long DriverID)
+        {
+            string query = String.Format("SELECT" +
+                " [OrderID] ,[Description] ,[LocationTo]," +
+                "[LocationFrom],[Status],[Priority],[DriverID]" +
+                "FROM[dbo].[Orders]" +
+                "WHERE DriverID = {0}", DriverID);
+            return _db.ExecuteQuery_GetOrderTD(query);
+        }
+
+        public List<Order> GetOrders(string LocationTo)
+        {
+            string query = String.Format("SELECT" +
+            " [OrderID] ,[Description] ,[LocationTo]," +
+            "[LocationFrom],[Status],[Priority],[DriverID]" +
+            "FROM[dbo].[Orders]" +
+            "WHERE LocationTo = {0}", LocationTo);
+            return _db.ExecuteQuery_GetOrderTD(query);
+        }
         #endregion
     }
 }
