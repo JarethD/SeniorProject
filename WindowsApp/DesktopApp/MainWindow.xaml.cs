@@ -100,5 +100,22 @@ namespace DesktopApp
             long id = databaseAccess.GetRecentEmployeeID();
             databaseAccess.DeleteTruckDriver(id);
         }
+
+        private void GetLumberCompanyButton_Click(object sender, RoutedEventArgs e)
+        {
+            String usernameBox = CompUsernameBox.Text;
+            if (usernameBox != "")
+            {
+                LumberCompany company = new LumberCompany(databaseAccess.GetLumberCompany(usernameBox));
+                if(company.username != null)
+                {
+                    CompUsernameText.Text = company.username;
+                }
+                else
+                {
+                    CompUsernameText.Text = "Not found";
+                }
+            }
+        }
     }
 }

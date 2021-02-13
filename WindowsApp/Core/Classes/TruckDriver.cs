@@ -63,8 +63,7 @@ namespace Core.Classes
             get => m_trCompID;
             set => m_trCompID = CompID;
         }
-        public TruckDriver()
-        { }
+
         public TruckDriver(string username, string hashpass, string name, long phonenum, string address, string company)
         {
             m_trUsername = username;
@@ -74,6 +73,17 @@ namespace Core.Classes
             m_trAddress = address;
             m_trCompany = company;
             //Grab greatest ID number from database and increment by and set m_trID to new ID 
+        }
+
+        public TruckDriver()
+        {
+            m_trUsername = "";
+            m_trHashPass = "";
+            m_trName = "";
+            m_trPhoneNum = 0;
+            m_trID = 0;
+            m_trAddress = "";
+            m_trCompany = "";
         }
         public void AddOrder(Order newOrder)
         {
@@ -128,6 +138,19 @@ namespace Core.Classes
                     m_trOrders.Append(order);
                 }
             }
+        }
+
+        public bool IsEmpty()
+        {
+            if (m_trUsername == "")
+                if (m_trHashPass == "")
+                    if (m_trName == "")
+                        if (m_trPhoneNum == 0)
+                            if (m_trID == 0)
+                                if (m_trAddress == "")
+                                    if (m_trCompany == "")
+                                        return true;
+            return false;
         }
     }
 }

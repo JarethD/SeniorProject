@@ -251,17 +251,8 @@ namespace Database_Helpers
                 catch (Exception) { return null; }
 
                 // Create New Truck Driver
-                LumberAssociate la = new LumberAssociate
-                {
-                    ID = userID,
-                    username = userName,
-                    HashPass = hash,
-                    name = name,
-                    Phonenum = phonenumber,
-                    Address = address,
-                    laCompanyID = ID,
-                    Orders = new List<Order>()
-                };
+                LumberAssociate la = new LumberAssociate(userName, hash, name, userID, phonenumber, address, compid);
+
                 return la;
             }
         }
@@ -272,9 +263,12 @@ namespace Database_Helpers
             {
                 SqlCommand com = new SqlCommand(sql, con);
 
-                int userID = 0;
+                long userID = 0;
                 string userName = "";
                 string hash = "";
+                long phonenumber = 0;
+                string compname = "";
+                string address = "";
 
                 try { con.Open(); }
                 catch (Exception) { return null; }
@@ -287,7 +281,10 @@ namespace Database_Helpers
                     {
                         userName = read.GetString(0);
                         hash = read.GetString(1);
-                        userID = read.GetInt32(2);
+                        userID = read.GetInt64(2);
+                        phonenumber = read.GetInt64(3);
+                        compname = read.GetString(4);
+                        address = read.GetString(5);
                     }
 
                     read.Close();
@@ -295,13 +292,9 @@ namespace Database_Helpers
                 catch (Exception) { return null; }
 
                 // Create New Truck Driver
-                LumberCompany lc = new LumberCompany
-                {
-                    ID = userID,
-                    username = userName,
-                    HashPass = hash,
-                    Employees = new List<TruckDriver>()
-                };
+                LumberCompany lc = new LumberCompany(userName, hash, compname, address, phonenumber);
+                lc.ID = userID;
+
                 return lc;
             }
         }
@@ -375,10 +368,10 @@ namespace Database_Helpers
             }
         }
 
-        public void ExecuteQuery_GetOrderTD(TruckDriver driver)
+        public List<Order> ExecuteQuery_GetOrderTD(TruckDriver driver)
         {
             string query = "SELECT Order FROM ORDER WHERE ID = '" + driver.ID + "';";
-
+            List<Order> returnList = new List<Order>();
             using (SqlConnection con = new SqlConnection(GetConnectionString()))
             {
                 SqlCommand com = new SqlCommand(query, con);
@@ -386,11 +379,28 @@ namespace Database_Helpers
                 con.Open();
                 SqlDataReader read = com.ExecuteReader();
 
+                long id = 0;
+                string desc = "";
+                string LocTo = "";
+                string LocFrom = "";
+                Int16 status;
+                Int16 priority;
+                long driverID = 0;
+
                 while(read.Read()) //Reads single line
                 {
                     //Order Datamember = read.GetInt32(0) EXAMPLE
+                    id = read.GetInt64(0);
+                    desc = read.GetString(1);
+                    LocTo = read.GetString(2);
+                    LocFrom = read.GetString(3);
+                    status = read.GetInt16(4);
+                    priority = read.GetInt16(5);
+                    driverID = read.GetInt32(6);
+                    Order tempOrder = new Order();
                 }
             }
+            return returnList;
         }
 
         //public List<Order> ExecuteQuery_GetOrderLA(LumberAssociate associate)

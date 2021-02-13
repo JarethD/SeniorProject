@@ -138,7 +138,7 @@ namespace Database_Helpers
             return _db.ExecuteQuery_NoReturnType(query);
         }
 
-        //public TruckDriver GetDriver(string username)
+        #region Deletion Functions
         public int DeleteHardwareStore(long tdID)
         {
             string query = String.Format("DELETE FROM [dbo].[Company] WHERE ID={0}",
@@ -172,5 +172,40 @@ namespace Database_Helpers
             string query = String.Format("DELETE FROM [dbo].[Orders] WHERE OrderID={0}", oldOrder.m_oID);
             return _db.ExecuteQuery_NoReturnType(query);
         }
+        #endregion
+
+        #region Get From Databases Functions
+        public TruckDriver GetTruckDriver(string username)
+        {
+            string query = String.Format("SELECT [Username] ,[Hashpass] ,[ID] ,[PhoneNumber] ,[CompName] ,[Address] " +
+                " FROM[dbo].[Employees] WHERE Username = '{0}'", username);
+            TruckDriver tempDriver = new TruckDriver();
+            tempDriver = _db.ExecuteQuery_SingleTD(query);
+            return tempDriver;
+        }
+
+        public LumberAssociate GetLumberAssociate(string username)
+        {
+            string query = String.Format("SELECT [Username] ,[Hashpass] ,[ID] ,[PhoneNumber] ,[CompName] ,[Address] " +
+                " FROM[dbo].[Employees] WHERE Username = '{0}'", username);
+            return _db.ExecuteQuery_SingleLA(query);
+        }
+
+        public LumberCompany GetLumberCompany(string username)
+        {
+            string query = String.Format("SELECT [Username] ,[Hashpass] ,[ID] ,[PhoneNumber] ,[CompName] ,[Address] " +
+                " FROM[dbo].[Company] WHERE Username = '{0}'", username);
+            LumberCompany company = new LumberCompany(_db.ExecuteQuery_SingleLC(query));
+            //company = _db.ExecuteQuery_SingleLC(query);
+            return company;
+        }
+        public HardwareStore GetHardwareStore(string username)
+        {
+            string query = String.Format("SELECT [Username] ,[Hashpass] ,[ID] ,[PhoneNumber] ,[CompName] ,[Address] " +
+                " FROM[dbo].[Company] WHERE Username = '{0}'", username);
+            return _db.ExecuteQuery_SingleHS(query);
+        }
+
+        #endregion
     }
 }

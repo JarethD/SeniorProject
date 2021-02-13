@@ -69,7 +69,7 @@ namespace Core.Classes
         public LumberAssociate()
         { }
         public LumberAssociate(string username, string hashpass, //int id, 
-            string name, long phoneNumber, string address, string company)//, int companyID)
+            string name, long id, long phoneNumber, string address, long companyID)//, int companyID) string company, 
         {
             m_laOrders = new List<Order>();
             m_laUsername = username;
@@ -77,13 +77,13 @@ namespace Core.Classes
                 m_laHashPass = "\0";
             else
                 m_laHashPass = hashpass;
-            //m_laID = id;
+            m_laID = id;
             m_laName = name;
             m_laPhoneNumber = phoneNumber;
             m_laAddress = address;
-            m_laCompany = company;
+            //m_laCompany = company;
             m_laID = 0;
-            //m_laCompanyID = companyID;
+            m_laCompanyID = companyID;
         }
 
         public void AddOrder(Order newOrder)

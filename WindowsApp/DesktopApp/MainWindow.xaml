@@ -5,21 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DesktopApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="600">
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-        <StackPanel HorizontalAlignment="Left" Margin="5,5,5,5">
-            <Button x:Name="AddHardwarestore" Content="Add HS"   Click="AddHardwarestore_Click"/>
-            <Button x:Name="AddLumberassociate" Content="Add la" Click="AddLumberassociate_Click"/>
-            <Button x:Name="AddLumbercompany" Content="Add lc"   Click="AddLumbercompany_Click"/>
-            <Button x:Name="AddTruckdriver" Content="Add td"   Click="AddTruckdriver_Click"/>
-            <Button x:Name="AddOrder" Content="Add Order" Click="AddOrder_Click" />
+        Title="Jareth Dodson Senior Project Test Window" Height="500" Width="600" WindowStyle="ThreeDBorderWindow">
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+            <StackPanel HorizontalAlignment="Left" Margin="5,5,5,5">
+                <Button x:Name="AddHardwarestore" Content="Add HS"   Click="AddHardwarestore_Click"/>
+                <Button x:Name="AddLumberassociate" Content="Add la" Click="AddLumberassociate_Click"/>
+                <Button x:Name="AddLumbercompany" Content="Add lc"   Click="AddLumbercompany_Click"/>
+                <Button x:Name="AddTruckdriver" Content="Add td"   Click="AddTruckdriver_Click"/>
+                <Button x:Name="AddOrder" Content="Add Order" Click="AddOrder_Click" />
             
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Right" Margin="5,5,5,5">
+                <Button x:Name="DeleteHardwareStore" Content="Delete Store" HorizontalContentAlignment="Left" Click="DeleteHardwareStore_Click"/>
+                <Button x:Name="DeleteLumberAssociate" Content="Delete Associate" HorizontalContentAlignment="Left" Click="DeleteLumberAssociate_Click"/>
+                <Button x:Name="DeleteLumberCompany" Content="Delete Lumber Company" HorizontalContentAlignment="Left" Click="DeleteLumberCompany_Click"/>
+                <Button x:Name="DeleteTruckDriver" Content="Delete Truck Driver" HorizontalContentAlignment="Left" Click="DeleteTruckDriver_Click"/>
+            </StackPanel>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Right" Margin="5,5,5,5">
-            <Button x:Name="DeleteHardwareStore" Content="Delete Store" HorizontalContentAlignment="Left" Click="DeleteHardwareStore_Click"/>
-            <Button x:Name="DeleteLumberAssociate" Content="Delete Associate" HorizontalContentAlignment="Left" Click="DeleteLumberAssociate_Click"/>
-            <Button x:Name="DeleteLumberCompany" Content="Delete Lumber Company" HorizontalContentAlignment="Left" Click="DeleteLumberCompany_Click"/>
-            <Button x:Name="DeleteTruckDriver" Content="Delete Truck Driver" HorizontalContentAlignment="Left" Click="DeleteTruckDriver_Click"/>
+
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="5,5,5,5">
+            <Button x:Name="GetLumberCompanyButton" Content="Get Lumber Company" Click="GetLumberCompanyButton_Click"/>
+            <TextBox x:Name="CompUsernameBox" />
+            <TextBlock x:Name="CompUsernameText" Margin="5,5,5,5" Background="AliceBlue"/>
         </StackPanel>
     </StackPanel>
 </Window>

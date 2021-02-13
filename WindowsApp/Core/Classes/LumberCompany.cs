@@ -58,7 +58,15 @@ namespace Core.Classes
         }
         public long m_lcID;
         public LumberCompany()
-        { }
+        {
+            m_lcName = "";
+            m_lcHashPass = "";
+            m_lcAddress = "";
+            m_lcUsername = "";
+            m_lcPhoneNum = 0;
+            m_lcID = 0;
+            m_lcEmployees = new List<TruckDriver>();
+        }
         public LumberCompany(string username, string hashpass, string companyName, string address, long phoneNum)//, int id)
         {
             m_lcUsername = username;
@@ -74,6 +82,8 @@ namespace Core.Classes
             // Grab ID from database and increase and set m_lcID
         }
 
+
+
         public LumberCompany(LumberCompany company)
         {
             m_lcAddress = company.m_lcAddress;
@@ -86,40 +96,42 @@ namespace Core.Classes
             m_lcEmployees = company.m_lcEmployees;
         }
 
-        public static bool operator== (LumberCompany lhd, LumberCompany rhd)
-        {
-            if (lhd.m_lcAddress != rhd.m_lcAddress)
-                return false;
-            if (lhd.m_lcUsername != rhd.m_lcUsername)
-                return false;
-            if (lhd.m_lcHashPass != rhd.m_lcHashPass)
-                return false;
-            if (lhd.m_lcID != rhd.m_lcID)
-                return false;
-            if (lhd.m_lcName != rhd.m_lcName)
-                return false;
-            if (lhd.m_lcNumEmployees != rhd.m_lcNumEmployees)
-                return false;
-            if (lhd.m_lcPhoneNum != rhd.m_lcPhoneNum)
-                return false;
-            if (lhd.m_lcEmployees != rhd.m_lcEmployees)
-                return false;
 
 
-            return true;
-        }
-        public static bool operator!= (LumberCompany lhd, LumberCompany rhd)
-        {
-            return !(lhd == rhd);
-        }
-        public override bool Equals(object o)
-        {
-            return true;
-        }
-        public override int GetHashCode()
-        {
-            return 0;
-        }
+        //public static bool operator== (LumberCompany lhd, LumberCompany rhd)
+        //{
+        //    if (lhd.m_lcAddress != rhd.m_lcAddress)
+        //        return false;
+        //    if (lhd.m_lcUsername != rhd.m_lcUsername)
+        //        return false;
+        //    if (lhd.m_lcHashPass != rhd.m_lcHashPass)
+        //        return false;
+        //    if (lhd.m_lcID != rhd.m_lcID)
+        //        return false;
+        //    if (lhd.m_lcName != rhd.m_lcName)
+        //        return false;
+        //    if (lhd.m_lcNumEmployees != rhd.m_lcNumEmployees)
+        //        return false;
+        //    if (lhd.m_lcPhoneNum != rhd.m_lcPhoneNum)
+        //        return false;
+        //    if (lhd.m_lcEmployees != rhd.m_lcEmployees)
+        //        return false;
+
+
+        //    return true;
+        //}
+        //public static bool operator!= (LumberCompany lhd, LumberCompany rhd)
+        //{
+        //    return !(lhd == rhd);
+        //}
+        //public override bool Equals(object o)
+        //{
+        //    return true;
+        //}
+        //public override int GetHashCode()
+        //{
+        //    return 0;
+        //}
         public void AddTD(TruckDriver driver)
         {
             m_lcEmployees.Append(driver);
