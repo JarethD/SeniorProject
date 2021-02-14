@@ -120,10 +120,13 @@ namespace DesktopApp
         private void GetOrder_Click(object sender, RoutedEventArgs e)
         {
             List<Order> DisplayList = new List<Order>();
-            String driveridstring = GetOrderBox.Text;
-            int driverid = Int32.Parse(driveridstring);
-            DisplayList = databaseAccess.GetOrders(driverid);
-            OrderBlock.Text = String.Format("{0}", DisplayList.Count());
+            //String driveridstring = GetOrderBox.Text;
+            //int driverid = Int32.Parse(driveridstring);
+            //DisplayList = databaseAccess.GetOrders(driverid);
+            //OrderBlock.Text = String.Format("{0}", DisplayList.Count());
+            String Locationto = GetOrderBox.Text;
+            DisplayList = databaseAccess.GetOrders(Locationto);
+
             OrderList.ItemsSource = DisplayList;
         }
     }

@@ -235,7 +235,7 @@ namespace Database_Helpers
             " [OrderID] ,[Description] ,[LocationTo]," +
             "[LocationFrom],[Status],[Priority],[DriverID]" +
             "FROM[dbo].[Orders]" +
-            "WHERE LocationTo = {0}", LocationTo);
+            "WHERE LocationTo = '{0}'", LocationTo);
             return _db.ExecuteQuery_GetOrderTD(query);
         }
         #endregion

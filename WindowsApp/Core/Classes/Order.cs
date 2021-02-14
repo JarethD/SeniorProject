@@ -36,7 +36,7 @@ namespace Core.Classes
             m_oPriority = curPriority;
         }
 
-        public Order(long id, string desc, string locFrom, string locTo, status curStatus, priority curPriority, long dID)
+        public Order(long id, string desc, string locTo, string locFrom, status curStatus, priority curPriority, long dID)
         {
             m_oID = id;
             m_oDescription = desc;
