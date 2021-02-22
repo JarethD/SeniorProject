@@ -34,3 +34,13 @@ C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\bin\Debug\Core.dll
 C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\bin\Debug\Database_Helpers.dll
 C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\bin\Debug\Core.pdb
 C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\bin\Debug\Database_Helpers.pdb
+C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\bin\Debug\BCrypt.Net-Next.dll
+C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\bin\Debug\System.Buffers.dll
+C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\bin\Debug\System.Memory.dll
+C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\bin\Debug\BCrypt.Net-Next.xml
+C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\bin\Debug\System.Buffers.xml
+C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\bin\Debug\System.Memory.xml
+C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml

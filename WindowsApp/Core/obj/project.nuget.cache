@@ -1,11 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "4ifR+VU7VMqv/e9OCDrBjvvMbc5Yi9/kE1ypSKBk7sJIEIF+EDu1tJ6AeBYaDjNoT/RGXR/Ps0W23fUSR4F7Og==",
+  "dgSpecHash": "X5eBCq6NVPNa0B63hdNqukVJC3a8YGQRicXcbyQuce//bhAcgBZXcJ3i2dvGaHnQUOpqSYEexT3rEHz0GRB2ag==",
   "success": true,
   "projectFilePath": "C:\\Users\\Jareth\\Desktop\\sp\\WindowsApp\\Core\\Core.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Jareth\\.nuget\\packages\\bcrypt.net-next\\4.0.2\\bcrypt.net-next.4.0.2.nupkg.sha512",
     "C:\\Users\\Jareth\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Jareth\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Jareth\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Jareth\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\Jareth\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\Jareth\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\Jareth\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.3\\system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512"
   ],
   "logs": []
 }

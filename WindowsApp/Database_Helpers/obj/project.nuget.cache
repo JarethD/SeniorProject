@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "WwbfYNwvyJHoZ/3CMiRMnqfaJC1y9mML9ZYq6PWb+o8WdBntz5l1QE4HQGzNoEfuCfXTff515DL+0aAmEX1ZOw==",
+  "dgSpecHash": "ytWojswq5WuDwTS7NaXPw1Mpup7Mj5QqOSI8UE5g4oZ34sHFf+++uQshco84IN4X7U8fxL1LEclPC1GC2gD+uw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Jareth\\Desktop\\sp\\WindowsApp\\Database_Helpers\\Database_Helpers.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Jareth\\.nuget\\packages\\bcrypt.net-next\\4.0.2\\bcrypt.net-next.4.0.2.nupkg.sha512",
     "C:\\Users\\Jareth\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Jareth\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Jareth\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

@@ -25,7 +25,6 @@ namespace DesktopApp
     public partial class MainWindow : Window
     {
         UserData databaseAccess;
-        iSqlServerDataAccess dbac;
         SqlServerDataAccess dbac2;
         public MainWindow()
         {
@@ -50,7 +49,10 @@ namespace DesktopApp
 
         private void AddTruckdriver_Click(object sender, RoutedEventArgs e)
         {
-            TruckDriver driver = new TruckDriver("raulg", " ", "Raul Gonzalez", 1234567891, "Arthur St.", "Cascape HC");
+            string password = TruckDriverPassword.Password;
+            string HashPass = BCryptHash.HashPassword(password);
+
+            TruckDriver driver = new TruckDriver("raulg", HashPass, "Raul Gonzalez", 1234567891, "Arthur St.", "Cascape HC");
             //Check Username, if username is not in database, then add truckdriver 
             //return true is successfull
             //return false is unsuccessfull

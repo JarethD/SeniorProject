@@ -6,13 +6,16 @@
         xmlns:local="clr-namespace:DesktopApp"
         mc:Ignorable="d"
         Title="Jareth Dodson Senior Project Test Window" Height="500" Width="600" WindowStyle="ThreeDBorderWindow">
+    
     <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
             <StackPanel HorizontalAlignment="Left" Margin="5,5,5,5">
                 <Button x:Name="AddHardwarestore" Content="Add HS"   Click="AddHardwarestore_Click"/>
+                <TextBox x:Name="HardwareStorePassword"/>
                 <Button x:Name="AddLumberassociate" Content="Add la" Click="AddLumberassociate_Click"/>
                 <Button x:Name="AddLumbercompany" Content="Add lc"   Click="AddLumbercompany_Click"/>
                 <Button x:Name="AddTruckdriver" Content="Add td"   Click="AddTruckdriver_Click"/>
+                <PasswordBox x:Name="TruckDriverPassword"/>
                 <Button x:Name="AddOrder" Content="Add Order" Click="AddOrder_Click" />
             
             </StackPanel>
