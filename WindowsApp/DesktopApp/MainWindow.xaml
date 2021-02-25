@@ -48,7 +48,21 @@
                     <ListView Margin="10" Name="OrderList"></ListView>
                 </Grid>
             </StackPanel>
+            <StackPanel>
+                <ComboBox Name="IdentifierBox"/>
+                <DockPanel LastChildFill="True">
+                    <TextBlock Text="Username"/>
+                    <TextBox x:Name="UsernameBox"/>
+                </DockPanel>
+                <DockPanel LastChildFill="True">
+                    <TextBlock Text="Password"/>
+                    <TextBox x:Name="isPasswordBox"/>
+                </DockPanel>
+                <TextBlock x:Name="IsPasswordBlock"/>
+                <Button x:Name="submitPass" Content="Verify Password" Click="submitPass_Click"/>
+            </StackPanel>
         </StackPanel>
+        
         
     </StackPanel>
 </Window>

@@ -36,6 +36,10 @@ namespace DesktopApp
             //databaseAcc = new UserData();
             dbac2 = new SqlServerDataAccess();
             databaseAccess = new UserData(dbac2);
+            IdentifierBox.Items.Add("Lumber Associate");
+            IdentifierBox.Items.Add("Hardware Store");
+            IdentifierBox.Items.Add("Lumber Company");
+            IdentifierBox.Items.Add("Truck Driver");
         }
 
         private void AddLumberassociate_Click(object sender, RoutedEventArgs e)
@@ -52,7 +56,7 @@ namespace DesktopApp
             string password = TruckDriverPassword.Password;
             string HashPass = BCryptHash.HashPassword(password);
 
-            TruckDriver driver = new TruckDriver("raulg", HashPass, "Raul Gonzalez", 1234567891, "Arthur St.", "Cascape HC");
+            TruckDriver driver = new TruckDriver("jjjj", HashPass, "Raul Gonzalez", 1234567891, "Arthur St.", 2);
             //Check Username, if username is not in database, then add truckdriver 
             //return true is successfull
             //return false is unsuccessfull
@@ -130,6 +134,44 @@ namespace DesktopApp
             DisplayList = databaseAccess.GetOrders(Locationto);
 
             OrderList.ItemsSource = DisplayList;
+        }
+
+        private void submitPass_Click(object sender, RoutedEventArgs e)
+        {
+            String password = isPasswordBox.Text;
+            String Username = UsernameBox.Text;
+            HardwareStore store;
+            LumberAssociate associate;
+            LumberCompany company;
+           // TruckDriver driver;
+            if (IdentifierBox.SelectedItem.Equals("Hardware Store"))
+                store = (databaseAccess.GetHardwareStore(Username));
+            else if (IdentifierBox.SelectedItem.Equals("Lumber Associate"))
+                associate = (databaseAccess.GetLumberAssociate(Username));
+            else if (IdentifierBox.SelectedItem.Equals("Lumber Company"))
+                company = (databaseAccess.GetLumberCompany(Username));
+            else if (IdentifierBox.SelectedItem.Equals("Truck Driver"))
+            {
+                TruckDriver driver = new TruckDriver(databaseAccess.GetTruckDriver(Username));
+                if (BCryptHash.ValidatePassword(password, driver.HashPass))
+                {
+                    IsPasswordBlock.Text = "True";
+                }
+                else
+                    IsPasswordBlock.Text = "False";
+            }// Get Password with current username
+            // Add username box for gui for testing 
+            // Delete all users for just a single user with a password or add gui to add all elements 
+            // or at least a username
+
+            //databaseAccess.GetHardwareStore(Username);
+            //String hashpass =
+            //if (BCryptHash.ValidatePassword(password, driver.HashPass ))
+            //{
+            //    IsPasswordBlock.Text = "True";
+            //}
+            //else
+            //    IsPasswordBlock.Text = "False";
         }
     }
 }

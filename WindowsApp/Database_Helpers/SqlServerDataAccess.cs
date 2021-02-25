@@ -170,7 +170,7 @@ namespace Database_Helpers
             {
                 SqlCommand com = new SqlCommand(sql, con);
 
-                int userID = 0;
+                long userID = 0;
                 string userName = "";
                 string hash = "";
                 long phonenumber = 00000000000;
@@ -189,7 +189,7 @@ namespace Database_Helpers
                         userName = read.GetString(0);
                         hash = read.GetString(1);
                         name = read.GetString(2);
-                        userID = read.GetInt32(3);
+                        userID = read.GetInt64(3);
                         phonenumber = read.GetInt64(4);
                         address = read.GetString(5);
                         compid = read.GetInt64(6);
@@ -198,19 +198,8 @@ namespace Database_Helpers
                     read.Close();
                 }
                 catch (Exception) { return null; }
+                TruckDriver td = new TruckDriver(userName, hash, name, phonenumber, address, compid);
 
-                // Create New Truck Driver
-                TruckDriver td = new TruckDriver
-                {
-                    ID = userID,
-                    username = userName,
-                    HashPass = hash,
-                    CompID = compid,
-                    Address = address,
-                    Phonenum = phonenumber,
-                    name = name,        // Wouldn't hurt to change truck driver variable to Name
-                    Orders = new List<Order>()
-                };
                 return td;
             }
         }
@@ -292,7 +281,7 @@ namespace Database_Helpers
                 catch (Exception) { return null; }
 
                 // Create New Truck Driver
-                LumberCompany lc = new LumberCompany(userName, hash, compname, address, phonenumber);
+                LumberCompany lc = new LumberCompany(userName, hash, ID, compname, address, phonenumber);
                 lc.ID = userID;
 
                 return lc;
@@ -305,9 +294,12 @@ namespace Database_Helpers
             {
                 SqlCommand com = new SqlCommand(sql, con);
 
-                int userID = 0;
+                long userID = 0;
                 string userName = "";
                 string hash = "";
+                long phonenumber = 0;
+                string compname = "";
+                string address = "";
 
                 try { con.Open(); }
                 catch (Exception) { return null; }
@@ -320,7 +312,10 @@ namespace Database_Helpers
                     {
                         userName = read.GetString(0);
                         hash = read.GetString(1);
-                        userID = read.GetInt32(2);
+                        userID = read.GetInt64(2);
+                        phonenumber = read.GetInt64(3);
+                        compname = read.GetString(4);
+                        address = read.GetString(5);
                     }
 
                     read.Close();
@@ -328,13 +323,8 @@ namespace Database_Helpers
                 catch (Exception) { return null; }
 
                 // Create New Truck Driver
-                HardwareStore hs = new HardwareStore
-                {
-                    ID = userID,
-                    username = userName,
-                    HashPass = hash,
-                    hsEmployees = new List<LumberAssociate>()
-                };
+                HardwareStore hs = new HardwareStore(userName, hash, userID, compname, address, phonenumber);
+               
                 return hs;
             }
         }

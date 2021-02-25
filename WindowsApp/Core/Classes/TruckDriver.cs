@@ -64,15 +64,26 @@ namespace Core.Classes
             set => m_trCompID = CompID;
         }
 
-        public TruckDriver(string username, string hashpass, string name, long phonenum, string address, string company)
+        public TruckDriver(string username, string hashpass, string name, long phonenum, string address, long company)
         {
             m_trUsername = username;
             m_trHashPass = hashpass;
             m_trName = name;
             m_trPhoneNum = phonenum;
             m_trAddress = address;
-            m_trCompany = company;
+            m_trCompID = company;
+            //m_trCompany = company;
          }
+
+        public TruckDriver(TruckDriver driver)
+        {
+            m_trUsername = driver.username;
+            m_trHashPass = driver.HashPass;
+            m_trName = driver.name;
+            m_trPhoneNum = driver.Phonenum;
+            m_trAddress = driver.Address;
+            m_trCompany = driver.Company;
+        }
 
         public TruckDriver()
         {

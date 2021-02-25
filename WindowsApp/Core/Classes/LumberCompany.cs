@@ -67,13 +67,14 @@ namespace Core.Classes
             m_lcID = 0;
             m_lcEmployees = new List<TruckDriver>();
         }
-        public LumberCompany(string username, string hashpass, string companyName, string address, long phoneNum)//, int id)
+        public LumberCompany(string username, string hashpass, long id, string companyName, string address, long phoneNum)//, int id)
         {
             m_lcUsername = username;
             m_lcHashPass = hashpass;
             m_lcAddress = address;
             m_lcName = companyName;
             m_lcPhoneNum = phoneNum;
+            m_lcID = id;
             m_lcEmployees = new List<TruckDriver>();
             m_lcNumEmployees = 0;
             //m_lcID = id;

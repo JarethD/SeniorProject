@@ -190,16 +190,16 @@ namespace Database_Helpers
         #region Get From Databases Functions
         public TruckDriver GetTruckDriver(string username)
         {
-            string query = String.Format("SELECT [Username] ,[Hashpass] ,[ID] ,[PhoneNumber] ,[CompName] ,[Address] " +
+            string query = String.Format("SELECT [Username] ,[Hashpass], [Name] ,[ID] ,[PhoneNumber] ,[Address] ,[Company] " +
                 " FROM[dbo].[Employees] WHERE Username = '{0}'", username);
-            TruckDriver tempDriver = new TruckDriver();
-            tempDriver = _db.ExecuteQuery_SingleTD(query);
+            TruckDriver tempDriver = new TruckDriver(_db.ExecuteQuery_SingleTD(query));
+            //tempDriver = _db.ExecuteQuery_SingleTD(query);
             return tempDriver;
         }
 
         public LumberAssociate GetLumberAssociate(string username)
         {
-            string query = String.Format("SELECT [Username] ,[Hashpass] ,[ID] ,[PhoneNumber] ,[CompName] ,[Address] " +
+            string query = String.Format("SELECT [Username] ,[Hashpass], [Name] ,[ID] ,[PhoneNumber] ,[Address] ,[Company] " +
                 " FROM[dbo].[Employees] WHERE Username = '{0}'", username);
             return _db.ExecuteQuery_SingleLA(query);
         }

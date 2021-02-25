@@ -1,16 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "X5eBCq6NVPNa0B63hdNqukVJC3a8YGQRicXcbyQuce//bhAcgBZXcJ3i2dvGaHnQUOpqSYEexT3rEHz0GRB2ag==",
+  "dgSpecHash": "oHedlmPL7MuK4AcsjcSc7njwxL2JyV3RCh9tv58O0raEuWSbkE4/4roZflk0Ay1XhpC0YXuLU7UeD2vEaQgglw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Jareth\\Desktop\\sp\\WindowsApp\\Core\\Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jareth\\.nuget\\packages\\bcrypt.net-next\\4.0.2\\bcrypt.net-next.4.0.2.nupkg.sha512",
     "C:\\Users\\Jareth\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Jareth\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Jareth\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",
     "C:\\Users\\Jareth\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Jareth\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\Jareth\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
-    "C:\\Users\\Jareth\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.3\\system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512"
+    "C:\\Users\\Jareth\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.3\\system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512",
+    "C:\\Users\\Jareth\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512",
+    "C:\\Users\\Jareth\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
   ],
   "logs": []
 }

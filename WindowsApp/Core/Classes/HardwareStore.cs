@@ -59,11 +59,12 @@ namespace Core.Classes
         
         public HardwareStore()
         { }
-        public HardwareStore(string username, string hashpass, string companyName, 
+        public HardwareStore(string username, string hashpass,long id, string companyName, 
             string address, long phoneNum)//, int storeID, int id)
         {
             m_hsUsername = username;
             m_hsHashPass = hashpass;
+            m_hsID = id;
             m_hsAddress = address;
             m_hsName = companyName;
             m_hsPhoneNum = phoneNum;

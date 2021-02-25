@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Database_Helpers", "Databas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{02EB1F3E-1790-44AA-A9B7-0DE01E8AA8DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging", "Messaging\Messaging.csproj", "{45179F49-CFE8-464C-8411-41151F829F64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{02EB1F3E-1790-44AA-A9B7-0DE01E8AA8DB}.Release|x64.Build.0 = Release|Any CPU
 		{02EB1F3E-1790-44AA-A9B7-0DE01E8AA8DB}.Release|x86.ActiveCfg = Release|Any CPU
 		{02EB1F3E-1790-44AA-A9B7-0DE01E8AA8DB}.Release|x86.Build.0 = Release|Any CPU
+		{45179F49-CFE8-464C-8411-41151F829F64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45179F49-CFE8-464C-8411-41151F829F64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45179F49-CFE8-464C-8411-41151F829F64}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{45179F49-CFE8-464C-8411-41151F829F64}.Debug|x64.Build.0 = Debug|Any CPU
+		{45179F49-CFE8-464C-8411-41151F829F64}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{45179F49-CFE8-464C-8411-41151F829F64}.Debug|x86.Build.0 = Debug|Any CPU
+		{45179F49-CFE8-464C-8411-41151F829F64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45179F49-CFE8-464C-8411-41151F829F64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45179F49-CFE8-464C-8411-41151F829F64}.Release|x64.ActiveCfg = Release|Any CPU
+		{45179F49-CFE8-464C-8411-41151F829F64}.Release|x64.Build.0 = Release|Any CPU
+		{45179F49-CFE8-464C-8411-41151F829F64}.Release|x86.ActiveCfg = Release|Any CPU
+		{45179F49-CFE8-464C-8411-41151F829F64}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
