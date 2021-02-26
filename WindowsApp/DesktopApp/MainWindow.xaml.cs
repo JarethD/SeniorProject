@@ -44,7 +44,8 @@ namespace DesktopApp
 
         private void AddLumberassociate_Click(object sender, RoutedEventArgs e)
         {
-            LumberAssociate associate = new LumberAssociate("raulg", " ", "Raul Gonzalez", 0, 1234567891, "Arthur St.", 1);
+            long id = databaseAccess.GetRecentEmployeeID();
+            LumberAssociate associate = new LumberAssociate("raulg", " ", "Raul Gonzalez", id, 1234567891, "Arthur St.", 1);
             //Check Username, if username is not in database, then add truckdriver 
             //return true is successfull
             //return false is unsuccessfull
@@ -55,7 +56,7 @@ namespace DesktopApp
         {
             string password = TruckDriverPassword.Password;
             string HashPass = BCryptHash.HashPassword(password);
-
+            long id = databaseAccess.GetRecentEmployeeID();
             TruckDriver driver = new TruckDriver("jjjj", HashPass, "Raul Gonzalez", 1234567891, "Arthur St.", 2);
             //Check Username, if username is not in database, then add truckdriver 
             //return true is successfull
@@ -65,13 +66,15 @@ namespace DesktopApp
 
         private void AddLumbercompany_Click(object sender, RoutedEventArgs e)
         {
-            LumberCompany company = new LumberCompany("BrookLumb", " ", "Brookings Lumber", "Arthur St", 3334445566);
+            long id = databaseAccess.GetRecentCompanyID();
+            LumberCompany company = new LumberCompany("BrookLumb", " ", id, "Brookings Lumber", "Arthur St", 3334445566);
             databaseAccess.AddLumberCompany(company);
         }
 
         private void AddHardwarestore_Click(object sender, RoutedEventArgs e)
         {
-            HardwareStore store = new HardwareStore("BrookAce", " ", "Ace Hardware", "327 Checto Rd.", 0099887766);
+            long id = databaseAccess.GetRecentCompanyID();
+            HardwareStore store = new HardwareStore("BrookAce", " ", id, "Ace Hardware", "327 Checto Rd.", 0099887766);
             databaseAccess.AddHardwareStore(store);
         }
 
