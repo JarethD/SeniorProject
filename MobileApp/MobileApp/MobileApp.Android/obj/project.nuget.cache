@@ -1,9 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "4VXnEouwi5S+RvjoFv18wU4VHUO/GOCS/f9WO8YaUGH7GH9TfF6tu7CTt0Tw+PzY+XTjR9Xcp3FX29IRNOTyzg==",
+  "dgSpecHash": "Ftg3om7ZFoF/p/NSit7KxV9iweFl/hjViezLM8dRfbBJz8i/y3jyPxiEUS/i9LV2B8YDt0FsDyZIiSj4nWnwfw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Jareth\\Desktop\\sp\\MobileApp\\MobileApp\\MobileApp.Android\\MobileApp.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Jareth\\.nuget\\packages\\bcrypt.net-next\\4.0.2\\bcrypt.net-next.4.0.2.nupkg.sha512",
+    "C:\\Users\\Jareth\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",
+    "C:\\Users\\Jareth\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\Jareth\\.nuget\\packages\\system.data.sqlclient\\4.8.2\\system.data.sqlclient.4.8.2.nupkg.sha512",
+    "C:\\Users\\Jareth\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\Jareth\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.3\\system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512",
+    "C:\\Users\\Jareth\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512",
     "C:\\Users\\Jareth\\.nuget\\packages\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
     "C:\\Users\\Jareth\\.nuget\\packages\\xamarin.android.arch.core.runtime\\1.1.1.3\\xamarin.android.arch.core.runtime.1.1.1.3.nupkg.sha512",
     "C:\\Users\\Jareth\\.nuget\\packages\\xamarin.android.arch.lifecycle.common\\1.1.1.3\\xamarin.android.arch.lifecycle.common.1.1.1.3.nupkg.sha512",
@@ -42,7 +49,7 @@
     "C:\\Users\\Jareth\\.nuget\\packages\\xamarin.android.support.versionedparcelable\\28.0.0.3\\xamarin.android.support.versionedparcelable.28.0.0.3.nupkg.sha512",
     "C:\\Users\\Jareth\\.nuget\\packages\\xamarin.android.support.viewpager\\28.0.0.3\\xamarin.android.support.viewpager.28.0.0.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.6.0.1141\\xamarin.forms.4.6.0.1141.nupkg.sha512"
+    "C:\\Users\\Jareth\\.nuget\\packages\\xamarin.forms\\4.6.0.1141\\xamarin.forms.4.6.0.1141.nupkg.sha512"
   ],
   "logs": []
 }

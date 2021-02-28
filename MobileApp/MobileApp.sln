@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileApp.Android", "MobileApp\MobileApp.Android\MobileApp.Android.csproj", "{23E5CC36-4910-4558-A801-A6ABF24973F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileApp", "MobileApp\MobileApp\MobileApp.csproj", "{BFDB79DA-D71A-4719-B875-83ECF2492DD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobileApp", "MobileApp\MobileApp\MobileApp.csproj", "{BFDB79DA-D71A-4719-B875-83ECF2492DD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{E1036AF2-D1BF-40F3-85E9-72B7E1EF8D5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sql_database", "Sql_database\Sql_database.csproj", "{D98CE722-85F9-4A80-8B1D-C68A32A37387}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +29,14 @@ Global
 		{BFDB79DA-D71A-4719-B875-83ECF2492DD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFDB79DA-D71A-4719-B875-83ECF2492DD3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BFDB79DA-D71A-4719-B875-83ECF2492DD3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E1036AF2-D1BF-40F3-85E9-72B7E1EF8D5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1036AF2-D1BF-40F3-85E9-72B7E1EF8D5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1036AF2-D1BF-40F3-85E9-72B7E1EF8D5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1036AF2-D1BF-40F3-85E9-72B7E1EF8D5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D98CE722-85F9-4A80-8B1D-C68A32A37387}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D98CE722-85F9-4A80-8B1D-C68A32A37387}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D98CE722-85F9-4A80-8B1D-C68A32A37387}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D98CE722-85F9-4A80-8B1D-C68A32A37387}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

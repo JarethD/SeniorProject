@@ -1,0 +1,4 @@
+C:\Users\Jareth\Desktop\sp\MobileApp\Sql_database\bin\Debug\netstandard2.0\Core.dll
+C:\Users\Jareth\Desktop\sp\MobileApp\Sql_database\obj\Debug\netstandard2.0\Sql_database.csprojAssemblyReference.cache
+C:\Users\Jareth\Desktop\sp\MobileApp\Sql_database\obj\Debug\netstandard2.0\Sql_database.AssemblyInfoInputs.cache
+C:\Users\Jareth\Desktop\sp\MobileApp\Sql_database\obj\Debug\netstandard2.0\Sql_database.AssemblyInfo.cs
