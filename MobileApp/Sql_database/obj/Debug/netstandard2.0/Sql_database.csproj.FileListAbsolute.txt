@@ -2,3 +2,11 @@ C:\Users\Jareth\Desktop\sp\MobileApp\Sql_database\bin\Debug\netstandard2.0\Core.
 C:\Users\Jareth\Desktop\sp\MobileApp\Sql_database\obj\Debug\netstandard2.0\Sql_database.csprojAssemblyReference.cache
 C:\Users\Jareth\Desktop\sp\MobileApp\Sql_database\obj\Debug\netstandard2.0\Sql_database.AssemblyInfoInputs.cache
 C:\Users\Jareth\Desktop\sp\MobileApp\Sql_database\obj\Debug\netstandard2.0\Sql_database.AssemblyInfo.cs
+C:\Users\Jareth\Desktop\sp\MobileApp\Sql_database\bin\Debug\netstandard2.0\Sql_database.deps.json
+C:\Users\Jareth\Desktop\sp\MobileApp\Sql_database\bin\Debug\netstandard2.0\Sql_database.dll
+C:\Users\Jareth\Desktop\sp\MobileApp\Sql_database\bin\Debug\netstandard2.0\Sql_database.pdb
+C:\Users\Jareth\Desktop\sp\MobileApp\Sql_database\bin\Debug\netstandard2.0\Core.pdb
+C:\Users\Jareth\Desktop\sp\MobileApp\Sql_database\obj\Debug\netstandard2.0\Sql_database.csproj.CoreCompileInputs.cache
+C:\Users\Jareth\Desktop\sp\MobileApp\Sql_database\obj\Debug\netstandard2.0\Sql_database.csproj.CopyComplete
+C:\Users\Jareth\Desktop\sp\MobileApp\Sql_database\obj\Debug\netstandard2.0\Sql_database.dll
+C:\Users\Jareth\Desktop\sp\MobileApp\Sql_database\obj\Debug\netstandard2.0\Sql_database.pdb

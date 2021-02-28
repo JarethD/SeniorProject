@@ -14,6 +14,15 @@
           "lib/netstandard2.0/BCrypt.Net-Next.dll": {}
         }
       },
+      "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {}
+        },
+        "runtime": {
+          "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -150,6 +159,19 @@
         "lib/netstandard2.0/BCrypt.Net-Next.xml",
         "lib/netstandard2.1/BCrypt.Net-Next.dll",
         "lib/netstandard2.1/BCrypt.Net-Next.xml"
+      ]
+    },
+    "Microsoft.Maps.MapControl.WPF/1.0.0.3": {
+      "sha512": "P5Xys9PH/NIZY8qPASd03VOrZ/eXyS1hSoruR7oM+Otn98DkvUD1LwO8m9Aro4/5jCU1BgRmOTJrIQm5y9UHnQ==",
+      "type": "package",
+      "path": "microsoft.maps.mapcontrol.wpf/1.0.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40-Client/Microsoft.Maps.MapControl.WPF.dll",
+        "lib/net40-Client/Microsoft.Maps.MapControl.WPF.xml",
+        "microsoft.maps.mapcontrol.wpf.1.0.0.3.nupkg.sha512",
+        "microsoft.maps.mapcontrol.wpf.nuspec"
       ]
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
@@ -506,6 +528,7 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "BCrypt.Net-Next >= 4.0.2",
+      "Microsoft.Maps.MapControl.WPF >= 1.0.0.3",
       "NETStandard.Library >= 2.0.3",
       "RabbitMQ.Client >= 6.2.1"
     ]
@@ -558,6 +581,10 @@
             "target": "Package",
             "version": "[4.0.2, )"
           },
+          "Microsoft.Maps.MapControl.WPF": {
+            "target": "Package",
+            "version": "[1.0.0.3, )"
+          },
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
@@ -582,5 +609,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Maps.MapControl.WPF 1.0.0.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Maps.MapControl.WPF",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    }
+  ]
 }

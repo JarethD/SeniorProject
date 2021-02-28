@@ -295,6 +295,37 @@
           "buildTransitive/Xamarin.Forms.props": {},
           "buildTransitive/Xamarin.Forms.targets": {}
         }
+      },
+      "Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "BCrypt.Net-Next": "4.0.2",
+          "RabbitMQ.Client": "6.2.1",
+          "System.Data.SqlClient": "4.8.2"
+        },
+        "compile": {
+          "bin/placeholder/Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.dll": {}
+        }
+      },
+      "Sql_database/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "BCrypt.Net-Next": "4.0.2",
+          "Core": "1.0.0",
+          "RabbitMQ.Client": "6.2.1",
+          "System.Data.SqlClient": "4.8.2"
+        },
+        "compile": {
+          "bin/placeholder/Sql_database.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sql_database.dll": {}
+        }
       }
     }
   },
@@ -1403,13 +1434,25 @@
         "xamarin.forms.4.6.0.1141.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
+    },
+    "Core/1.0.0": {
+      "type": "project",
+      "path": "../../Core/Core.csproj",
+      "msbuildProject": "../../Core/Core.csproj"
+    },
+    "Sql_database/1.0.0": {
+      "type": "project",
+      "path": "../../Sql_database/Sql_database.csproj",
+      "msbuildProject": "../../Sql_database/Sql_database.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "BCrypt.Net-Next >= 4.0.2",
+      "Core >= 1.0.0",
       "NETStandard.Library >= 2.0.3",
       "RabbitMQ.Client >= 6.2.1",
+      "Sql_database >= 1.0.0",
       "System.Data.SqlClient >= 4.8.2",
       "Xamarin.Essentials >= 1.5.3.2",
       "Xamarin.Forms >= 4.6.0.1141"
@@ -1446,7 +1489,14 @@
       "frameworks": {
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Jareth\\Desktop\\sp\\MobileApp\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\Jareth\\Desktop\\sp\\MobileApp\\Core\\Core.csproj"
+            },
+            "C:\\Users\\Jareth\\Desktop\\sp\\MobileApp\\Sql_database\\Sql_database.csproj": {
+              "projectPath": "C:\\Users\\Jareth\\Desktop\\sp\\MobileApp\\Sql_database\\Sql_database.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

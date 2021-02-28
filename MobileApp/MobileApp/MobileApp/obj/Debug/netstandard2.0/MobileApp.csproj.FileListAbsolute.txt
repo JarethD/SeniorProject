@@ -17,3 +17,8 @@ C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp\obj\Debug\netstandard2.
 C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp\obj\Debug\netstandard2.0\MobileApp.dll
 C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp\obj\Debug\netstandard2.0\ref\MobileApp.dll
 C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp\obj\Debug\netstandard2.0\MobileApp.pdb
+C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp\bin\Debug\netstandard2.0\Core.dll
+C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp\bin\Debug\netstandard2.0\Sql_database.dll
+C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp\bin\Debug\netstandard2.0\Core.pdb
+C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp\bin\Debug\netstandard2.0\Sql_database.pdb
+C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp\obj\Debug\netstandard2.0\MobileApp.csproj.CopyComplete

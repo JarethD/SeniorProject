@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "DgqYBDZXOd26Ur86cC9Pr2UHQy9DgUEZxQlfdbLNLIxhPxyHYlpd2SiH4B6rnOFTskA7ATKxO17534t9PWCMAg==",
+  "dgSpecHash": "fIS3G928AkHjGXNJBx3q823Rb1asb3mZqHajdkANAc3DaV+6btuHtz4UUnxxORZaz49F1f5iiZyJ+lEULmDLJQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Jareth\\Desktop\\sp\\WindowsApp\\Database_Helpers\\Database_Helpers.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jareth\\.nuget\\packages\\bcrypt.net-next\\4.0.2\\bcrypt.net-next.4.0.2.nupkg.sha512",
+    "C:\\Users\\Jareth\\.nuget\\packages\\microsoft.maps.mapcontrol.wpf\\1.0.0.3\\microsoft.maps.mapcontrol.wpf.1.0.0.3.nupkg.sha512",
     "C:\\Users\\Jareth\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Jareth\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Jareth\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
@@ -25,5 +26,16 @@
     "C:\\Users\\Jareth\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512",
     "C:\\Users\\Jareth\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Maps.MapControl.WPF 1.0.0.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Maps.MapControl.WPF",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    }
+  ]
 }

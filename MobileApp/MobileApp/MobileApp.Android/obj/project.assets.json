@@ -865,12 +865,29 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
-      "MobileApp/1.0.0": {
+      "Core/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "BCrypt.Net-Next": "4.0.2",
           "RabbitMQ.Client": "6.2.1",
+          "System.Data.SqlClient": "4.8.2"
+        },
+        "compile": {
+          "bin/placeholder/Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.dll": {}
+        }
+      },
+      "MobileApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "BCrypt.Net-Next": "4.0.2",
+          "Core": "1.0.0",
+          "RabbitMQ.Client": "6.2.1",
+          "Sql_database": "1.0.0",
           "System.Data.SqlClient": "4.8.2",
           "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Forms": "4.6.0.1141"
@@ -880,6 +897,22 @@
         },
         "runtime": {
           "bin/placeholder/MobileApp.dll": {}
+        }
+      },
+      "Sql_database/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "BCrypt.Net-Next": "4.0.2",
+          "Core": "1.0.0",
+          "RabbitMQ.Client": "6.2.1",
+          "System.Data.SqlClient": "4.8.2"
+        },
+        "compile": {
+          "bin/placeholder/Sql_database.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sql_database.dll": {}
         }
       }
     }
@@ -2245,10 +2278,20 @@
         "xamarin.forms.nuspec"
       ]
     },
+    "Core/1.0.0": {
+      "type": "project",
+      "path": "../../Core/Core.csproj",
+      "msbuildProject": "../../Core/Core.csproj"
+    },
     "MobileApp/1.0.0": {
       "type": "project",
       "path": "../MobileApp/MobileApp.csproj",
       "msbuildProject": "../MobileApp/MobileApp.csproj"
+    },
+    "Sql_database/1.0.0": {
+      "type": "project",
+      "path": "../../Sql_database/Sql_database.csproj",
+      "msbuildProject": "../../Sql_database/Sql_database.csproj"
     }
   },
   "projectFileDependencyGroups": {

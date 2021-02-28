@@ -477,3 +477,11 @@ C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp.Android\obj\Debug\90\st
 C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp.Android\obj\Debug\90\android\assets\BCrypt.Net-Next.dll
+C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp.Android\obj\Debug\90\android\assets\RabbitMQ.Client.dll
+C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp.Android\obj\Debug\90\android\assets\RabbitMQ.Client.pdb
+C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp.Android\obj\Debug\90\android\assets\System.Buffers.dll
+C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp.Android\obj\Debug\90\android\assets\System.Memory.dll
+C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp.Android\obj\Debug\90\android\assets\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp.Android\obj\Debug\90\android\assets\System.Threading.Channels.dll
+C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp.Android\obj\Debug\90\android\assets\System.Threading.Tasks.Extensions.dll

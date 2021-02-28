@@ -3,8 +3,11 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "MobileApp.Android.dll" comes first in this list. */
 		"MobileApp.Android.dll",
+		"BCrypt.Net-Next.dll",
 		"FormsViewGroup.dll",
 		"MobileApp.dll",
+		"RabbitMQ.Client.dll",
+		"System.Threading.Channels.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",
