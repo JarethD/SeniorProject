@@ -16,6 +16,7 @@ using Database_Helpers;
 using Core.Classes;
 using Core.Interfaces;
 using CommonServiceLocator;
+using Microsoft.Maps.MapControl.WPF;
 
 namespace DesktopApp
 {
@@ -162,7 +163,9 @@ namespace DesktopApp
                 }
                 else
                     IsPasswordBlock.Text = "False";
-            }// Get Password with current username
+            }        
+            
+            // Get Password with current username
             // Add username box for gui for testing 
             // Delete all users for just a single user with a password or add gui to add all elements 
             // or at least a username
@@ -175,6 +178,15 @@ namespace DesktopApp
             //}
             //else
             //    IsPasswordBlock.Text = "False";
+        }
+
+        private void MapButton_Click(object sender, RoutedEventArgs e)
+        {
+            Location newLoc = new Location(42.2087005, -121.7496298);
+            OrderMap.Center = newLoc;// new Location(42.2087005, -121.7496298);
+            OrderMap.ZoomLevel = 16;
+            OrderPushPin.Visibility = Visibility.Visible;
+            OrderPushPin.Location = newLoc;
         }
     }
 }

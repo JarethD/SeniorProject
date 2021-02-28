@@ -10,6 +10,7 @@
       "Database_Helpers/1.0.0": {
         "dependencies": {
           "BCrypt.Net-Next": "4.0.2",
+          "BingMapsRESTToolkit": "1.1.4",
           "Core": "1.0.0",
           "NETStandard.Library": "2.0.3",
           "RabbitMQ.Client": "6.2.1",
@@ -27,6 +28,14 @@
           "lib/netstandard2.0/BCrypt.Net-Next.dll": {
             "assemblyVersion": "4.0.2.0",
             "fileVersion": "4.0.2.0"
+          }
+        }
+      },
+      "BingMapsRESTToolkit/1.1.4": {
+        "runtime": {
+          "lib/netstandard2.0/BingMapsRESTToolkit.dll": {
+            "assemblyVersion": "1.1.4.0",
+            "fileVersion": "1.1.4.0"
           }
         }
       },
@@ -192,6 +201,7 @@
       "Core/1.0.0": {
         "dependencies": {
           "BCrypt.Net-Next": "4.0.2",
+          "BingMapsRESTToolkit": "1.1.4",
           "RabbitMQ.Client": "6.2.1"
         },
         "runtime": {
@@ -212,6 +222,13 @@
       "sha512": "sha512-LyNKpIpr4GraRD9+xlTviyxxbZpF6J4xJf7DvraC1mR8PSN/KonGc4rt8C/fjkD3vaEvgA7BcvsbHFCOjgczyQ==",
       "path": "bcrypt.net-next/4.0.2",
       "hashPath": "bcrypt.net-next.4.0.2.nupkg.sha512"
+    },
+    "BingMapsRESTToolkit/1.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RFRROSRwLJnaET74DdKcesArciUTPhJ7geWvIsjITzGSIUIAigTLYEgSEZFX9YZVl/CPCPYPyEt0n6raL34Gvw==",
+      "path": "bingmapsresttoolkit/1.1.4",
+      "hashPath": "bingmapsresttoolkit.1.1.4.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",

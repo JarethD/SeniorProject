@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
         xmlns:local="clr-namespace:DesktopApp"
         mc:Ignorable="d"
         Title="Jareth Dodson Senior Project Test Window" Height="500" Width="600" WindowStyle="ThreeDBorderWindow">
@@ -62,7 +63,16 @@
                 <Button x:Name="submitPass" Content="Verify Password" Click="submitPass_Click"/>
             </StackPanel>
         </StackPanel>
-        
-        
+
+        <StackPanel>
+            <Button x:Name="MapButton" Content="Get Location" Click="MapButton_Click"/>
+            <!--<Maps:MapControl x:Name="MapControl1" MapServiceToken="sbE9cEyP9Jww2VeQYVvU~7sUdoDqhPEQo9puj1-SPtA~AklVyYpivL07obf45GyQLM-V3FCdmuIGVjQ8fvC3EyQtst7zAFd8qR15CwaNzT5j"/> -->
+        </StackPanel>
+        <Grid Height="120">
+            <m:Map x:Name="OrderMap" CredentialsProvider="sbE9cEyP9Jww2VeQYVvU~7sUdoDqhPEQo9puj1-SPtA~AklVyYpivL07obf45GyQLM-V3FCdmuIGVjQ8fvC3EyQtst7zAFd8qR15CwaNzT5j">
+                <m:Pushpin x:Name="OrderPushPin" Visibility="Hidden"/>
+            </m:Map>
+        </Grid>
+
     </StackPanel>
 </Window>
