@@ -28,10 +28,11 @@ namespace DesktopApp
     {
         UserData databaseAccess;
         SqlServerDataAccess dbac2;
-        string message;
+        string message = "";
         public MainWindow()
         {
             InitializeComponent();
+            //message = "1";
             //HardwareStore lumberCompany = new HardwareStore("AceHardwareBKOR", "", "Ace Hardware", "Brookings Oregon", 5416619764, 01, 01);
             //LumberAssociate lumberPerson = new LumberAssociate("JarethDodson", "", 01, "Jareth Dodson", 5415554444, "Ace Hardware", 01);
             //lumberCompany.AddLA(lumberPerson);
@@ -176,7 +177,8 @@ namespace DesktopApp
 
         private void MapButton_Click(object sender, RoutedEventArgs e)
         {
-            Location newLoc = new Location(42.2087005, -121.7496298);
+            Order newOrder = databaseAccess.GetSingleOrder(2);
+            Location newLoc = new Location(newOrder.m_longitude, newOrder.m_latitude);
             OrderMap.Center = newLoc;// new Location(42.2087005, -121.7496298);
             OrderMap.ZoomLevel = 16;
             OrderPushPin.Visibility = Visibility.Visible;

@@ -64,9 +64,9 @@
             </StackPanel>
         </StackPanel>
 
-        <StackPanel>
+        <StackPanel Orientation="Horizontal">
             <Button x:Name="MapButton" Content="Get Location" Click="MapButton_Click"/>
-            <!--<Maps:MapControl x:Name="MapControl1" MapServiceToken="sbE9cEyP9Jww2VeQYVvU~7sUdoDqhPEQo9puj1-SPtA~AklVyYpivL07obf45GyQLM-V3FCdmuIGVjQ8fvC3EyQtst7zAFd8qR15CwaNzT5j"/> -->
+            <TextBox x:Name="LocationID"/>
         </StackPanel>
         <Grid Height="120">
             <m:Map x:Name="OrderMap" CredentialsProvider="sbE9cEyP9Jww2VeQYVvU~7sUdoDqhPEQo9puj1-SPtA~AklVyYpivL07obf45GyQLM-V3FCdmuIGVjQ8fvC3EyQtst7zAFd8qR15CwaNzT5j">

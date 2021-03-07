@@ -219,11 +219,11 @@ namespace Database_Helpers
             return _db.ExecuteQuery_SingleHS(query);
         }
 
-        public Order GetSingleOrder(long DriverID)
+        public Order GetSingleOrder(long OrderID)
         {
             string query = string.Format("SELECT [Longitude],[Latitude] " +
                 "FROM[dbo].[Orders] " +
-                "WHERE OrderID = {0}", DriverID);
+                "WHERE OrderID = {0}", OrderID);
             return _db.ExecuteQuery_GetOrder(query);
         }
 
