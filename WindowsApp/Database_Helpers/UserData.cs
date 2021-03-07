@@ -219,6 +219,14 @@ namespace Database_Helpers
             return _db.ExecuteQuery_SingleHS(query);
         }
 
+        public Order GetSingleOrder(long DriverID)
+        {
+            string query = string.Format("SELECT [Longitude],[Latitude] " +
+                "FROM[dbo].[Orders] " +
+                "WHERE OrderID = {0}", DriverID);
+            return _db.ExecuteQuery_GetOrder(query);
+        }
+
         public List<Order> GetOrders(long DriverID)
         {
             string query = String.Format("SELECT" +

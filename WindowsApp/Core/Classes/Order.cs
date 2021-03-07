@@ -20,13 +20,15 @@ namespace Core.Classes
         public string m_oLocationFrom { get; set; }
         public status m_oStatus { get; set; }
         public priority m_oPriority { get; set; }
-        
+        public float m_longitude { get; set; }
+        public float m_latitude { get; set; }
         public Order()
         {
             // empty ctor
         }
 
-        public Order(string name, string desc, string locFrom, string locTo, status curStatus, priority curPriority)
+        public Order(string name, string desc, string locFrom, string locTo,
+            status curStatus, priority curPriority)
         {
             m_oName = name;
             m_oDescription = desc;
@@ -36,7 +38,8 @@ namespace Core.Classes
             m_oPriority = curPriority;
         }
 
-        public Order(long id, string desc, string locTo, string locFrom, status curStatus, priority curPriority, long dID)
+        public Order(long id, string desc, string locTo, string locFrom,
+            status curStatus, priority curPriority, long dID)
         {
             m_oID = id;
             m_oDescription = desc;
@@ -45,6 +48,21 @@ namespace Core.Classes
             m_oStatus = curStatus;
             m_oPriority = curPriority;
             m_oDriverID = dID;
+        }
+
+        public Order(long id, string desc, string locTo, string locFrom,
+            status curStatus, priority curPriority, long dID,
+            float longitude, float latitude)
+        {
+            m_oID = id;
+            m_oDescription = desc;
+            m_oLocationFrom = locFrom;
+            m_oLocationTo = locTo;
+            m_oStatus = curStatus;
+            m_oPriority = curPriority;
+            m_oDriverID = dID;
+            m_longitude = longitude;
+            m_latitude = latitude;
         }
 
         public override string ToString()
