@@ -880,12 +880,26 @@
           "bin/placeholder/Core.dll": {}
         }
       },
+      "Messaging/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "RabbitMQ.Client": "6.2.1"
+        },
+        "compile": {
+          "bin/placeholder/Messaging.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Messaging.dll": {}
+        }
+      },
       "MobileApp/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "BCrypt.Net-Next": "4.0.2",
           "Core": "1.0.0",
+          "Messaging": "1.0.0",
           "RabbitMQ.Client": "6.2.1",
           "Sql_database": "1.0.0",
           "System.Data.SqlClient": "4.8.2",
@@ -2282,6 +2296,11 @@
       "type": "project",
       "path": "../../Core/Core.csproj",
       "msbuildProject": "../../Core/Core.csproj"
+    },
+    "Messaging/1.0.0": {
+      "type": "project",
+      "path": "../../Messagin/Messaging.csproj",
+      "msbuildProject": "../../Messagin/Messaging.csproj"
     },
     "MobileApp/1.0.0": {
       "type": "project",

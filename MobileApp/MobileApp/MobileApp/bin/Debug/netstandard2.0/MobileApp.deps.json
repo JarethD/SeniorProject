@@ -11,6 +11,7 @@
         "dependencies": {
           "BCrypt.Net-Next": "4.0.2",
           "Core": "1.0.0",
+          "Messaging": "1.0.0",
           "NETStandard.Library": "2.0.3",
           "RabbitMQ.Client": "6.2.1",
           "Sql_database": "1.0.0",
@@ -229,6 +230,14 @@
           "Core.dll": {}
         }
       },
+      "Messaging/1.0.0": {
+        "dependencies": {
+          "RabbitMQ.Client": "6.2.1"
+        },
+        "runtime": {
+          "Messaging.dll": {}
+        }
+      },
       "Sql_database/1.0.0": {
         "dependencies": {
           "BCrypt.Net-Next": "4.0.2",
@@ -403,6 +412,11 @@
       "hashPath": "xamarin.forms.4.6.0.1141.nupkg.sha512"
     },
     "Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Messaging/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

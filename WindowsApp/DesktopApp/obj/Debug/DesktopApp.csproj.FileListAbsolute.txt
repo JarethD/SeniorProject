@@ -56,3 +56,5 @@ C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\bin\Debug\Microsoft.Maps.MapCon
 C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\bin\Debug\BingMapsRESTToolkit.pdb
 C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\bin\Debug\BingMapsRESTToolkit.xml
 C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
+C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\bin\Debug\Messaging.dll
+C:\Users\Jareth\Desktop\sp\WindowsApp\DesktopApp\bin\Debug\Messaging.pdb

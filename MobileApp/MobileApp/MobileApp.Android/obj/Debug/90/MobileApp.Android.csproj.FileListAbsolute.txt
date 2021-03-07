@@ -485,3 +485,12 @@ C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp.Android\obj\Debug\90\an
 C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp.Android\obj\Debug\90\android\assets\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp.Android\obj\Debug\90\android\assets\System.Threading.Channels.dll
 C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp.Android\obj\Debug\90\android\assets\System.Threading.Tasks.Extensions.dll
+C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp.Android\bin\Debug\Sql_database.dll
+C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp.Android\bin\Debug\Core.dll
+C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp.Android\bin\Debug\Sql_database.pdb
+C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp.Android\bin\Debug\Core.pdb
+C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp.Android\obj\Debug\90\android\assets\Core.dll
+C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp.Android\obj\Debug\90\android\assets\Core.pdb
+C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp.Android\obj\Debug\90\android\assets\Sql_database.dll
+C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp.Android\obj\Debug\90\android\assets\Sql_database.pdb
+C:\Users\Jareth\Desktop\sp\MobileApp\MobileApp\MobileApp.Android\obj\Debug\90\android\assets\System.Data.SqlClient.dll

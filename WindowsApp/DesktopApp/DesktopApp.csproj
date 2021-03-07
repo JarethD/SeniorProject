@@ -160,6 +160,10 @@
       <Project>{e6e25584-e9ef-4536-b6ba-ee8811a6ac75}</Project>
       <Name>Database_Helpers</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Messaging\Messaging.csproj">
+      <Project>{45179f49-cfe8-464c-8411-41151f829f64}</Project>
+      <Name>Messaging</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

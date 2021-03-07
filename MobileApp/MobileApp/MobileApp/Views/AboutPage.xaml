@@ -42,6 +42,13 @@
                 <Label x:Name="LocationLabel" 
                        Text="{Binding m_locationLabel}"
                        TextColor="White"/>
+                        
+                <Entry x:Name="IDEntry"/>
+                <Button Text="Send Location"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White"
+                        Clicked="SendLocation_Clicked"/>
+
             </StackLayout>
         </ScrollView>
     </Grid>

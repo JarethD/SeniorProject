@@ -7,7 +7,7 @@ using Core.Classes;
 
 namespace Sql_database
 {
-    class DBAccess
+    public class DBAccess
     {
         public enum UserType { TD, LA, HS, LC };
 
@@ -25,6 +25,9 @@ namespace Sql_database
 
         private int FAIL = 0;
         private int PASS = 1;
+
+        public DBAccess() { }
+
 
         #region public properties
         //public properties
@@ -152,7 +155,7 @@ namespace Sql_database
                     con.Open();
                     comm.ExecuteNonQuery();
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
                     return FAIL;
                 }
@@ -354,7 +357,43 @@ namespace Sql_database
                 return userID;
             }
         }
+        
+        public Order ExecuteQuery_GetOrder(string sql)
+        {
+            using (SqlConnection con = new SqlConnection(GetConnectionString()))
+            {
+                SqlCommand com = new SqlCommand(sql, con);
+                con.Open();
+                SqlDataReader read = com.ExecuteReader();
 
+                long id = 0;
+                string desc = "";
+                string LocTo = "";
+                string LocFrom = "";
+                Int16 status = 0;
+                Int16 priority = 0;
+                long driverID = 0;
+                float longitude = 0;
+                float latitude = 0;
+
+                while (read.Read()) //Reads single line
+                {
+                    //Order Datamember = read.GetInt32(0) EXAMPLE
+                    id = read.GetInt64(0);
+                    desc = read.GetString(1);
+                    LocTo = read.GetString(2);
+                    LocFrom = read.GetString(3);
+                    status = read.GetInt16(4);
+                    priority = read.GetInt16(5);
+                    driverID = read.GetInt64(6);
+                    longitude = read.GetFloat(7);
+                    latitude = read.GetFloat(8);
+                }
+
+                Order newOrder = new Order(id, desc, LocTo, LocFrom, (Core.Classes.status)status, (Core.Classes.priority)priority, driverID, longitude, latitude);
+                return newOrder;
+            }
+        }
         public List<Order> ExecuteQuery_GetOrderTD(string sql)
         {
             List<Order> returnList = new List<Order>();

@@ -12,16 +12,9 @@ namespace MobileApp.ViewModels
             Title = "About";
             OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamain-quickstart"));
 
-            //GetLocation = new Command(async () =>
-            //{
-            //    await ;
-            //});
         }
 
-        
-
         public ICommand OpenWebCommand { get; }
-        public ICommand GetLocation { get; }
         
     }
 }

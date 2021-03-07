@@ -1,0 +1,9 @@
+C:\Users\Jareth\Desktop\sp\WindowsApp\Messaging\bin\Debug\netstandard2.0\Messaging.deps.json
+C:\Users\Jareth\Desktop\sp\WindowsApp\Messaging\bin\Debug\netstandard2.0\Messaging.dll
+C:\Users\Jareth\Desktop\sp\WindowsApp\Messaging\bin\Debug\netstandard2.0\Messaging.pdb
+C:\Users\Jareth\Desktop\sp\WindowsApp\Messaging\obj\Debug\netstandard2.0\Messaging.csprojAssemblyReference.cache
+C:\Users\Jareth\Desktop\sp\WindowsApp\Messaging\obj\Debug\netstandard2.0\Messaging.AssemblyInfoInputs.cache
+C:\Users\Jareth\Desktop\sp\WindowsApp\Messaging\obj\Debug\netstandard2.0\Messaging.AssemblyInfo.cs
+C:\Users\Jareth\Desktop\sp\WindowsApp\Messaging\obj\Debug\netstandard2.0\Messaging.csproj.CoreCompileInputs.cache
+C:\Users\Jareth\Desktop\sp\WindowsApp\Messaging\obj\Debug\netstandard2.0\Messaging.dll
+C:\Users\Jareth\Desktop\sp\WindowsApp\Messaging\obj\Debug\netstandard2.0\Messaging.pdb

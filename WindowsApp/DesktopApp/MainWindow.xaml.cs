@@ -17,6 +17,7 @@ using Core.Classes;
 using Core.Interfaces;
 using CommonServiceLocator;
 using Microsoft.Maps.MapControl.WPF;
+using Messaging;
 
 namespace DesktopApp
 {
@@ -27,6 +28,7 @@ namespace DesktopApp
     {
         UserData databaseAccess;
         SqlServerDataAccess dbac2;
+        string message;
         public MainWindow()
         {
             InitializeComponent();
@@ -35,6 +37,7 @@ namespace DesktopApp
             //lumberCompany.AddLA(lumberPerson);
             // = new iSqlServerDataAccess();   
             //databaseAcc = new UserData();
+            Receive.ReceiveMessage(message);
             dbac2 = new SqlServerDataAccess();
             databaseAccess = new UserData(dbac2);
             IdentifierBox.Items.Add("Lumber Associate");
@@ -147,7 +150,7 @@ namespace DesktopApp
             HardwareStore store;
             LumberAssociate associate;
             LumberCompany company;
-           // TruckDriver driver;
+            // TruckDriver driver;
             if (IdentifierBox.SelectedItem.Equals("Hardware Store"))
                 store = (databaseAccess.GetHardwareStore(Username));
             else if (IdentifierBox.SelectedItem.Equals("Lumber Associate"))
@@ -163,22 +166,13 @@ namespace DesktopApp
                 }
                 else
                     IsPasswordBlock.Text = "False";
-            }        
-            
+            }
+        }
             // Get Password with current username
             // Add username box for gui for testing 
             // Delete all users for just a single user with a password or add gui to add all elements 
             // or at least a username
 
-            //databaseAccess.GetHardwareStore(Username);
-            //String hashpass =
-            //if (BCryptHash.ValidatePassword(password, driver.HashPass ))
-            //{
-            //    IsPasswordBlock.Text = "True";
-            //}
-            //else
-            //    IsPasswordBlock.Text = "False";
-        }
 
         private void MapButton_Click(object sender, RoutedEventArgs e)
         {

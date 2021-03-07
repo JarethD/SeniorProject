@@ -5,7 +5,7 @@ using Core.Classes;
 
 namespace Sql_database
 {
-    class UserAccess
+    public class UserAccess
     {
 
         private DBAccess _db;
@@ -34,6 +34,17 @@ namespace Sql_database
             string query = string.Format("SELECT MAX(OrderID) FROM Orders");
             long newID = _db.ExecuteQuery_SingleID(query);
             return ++newID;
+        }
+
+        public bool SetLatAndLong(int OrderID, double latitude, double longitude)
+        {
+            bool pass = true;
+            string query = string.Format("UPDATE Orders " +
+                "SET longitude={0}, latitude={1} " +
+                "WHERE OrderID={2}", longitude, latitude, OrderID);
+            _db.ExecuteQuery_NoReturnType(query);
+            //_db.ExecuteQuery_GetOrder(query);
+            return pass;
         }
 
         #region Add to Database

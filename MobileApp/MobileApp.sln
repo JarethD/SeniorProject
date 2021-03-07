@@ -7,9 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileApp.Android", "Mobile
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobileApp", "MobileApp\MobileApp\MobileApp.csproj", "{BFDB79DA-D71A-4719-B875-83ECF2492DD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{E1036AF2-D1BF-40F3-85E9-72B7E1EF8D5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{E1036AF2-D1BF-40F3-85E9-72B7E1EF8D5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sql_database", "Sql_database\Sql_database.csproj", "{D98CE722-85F9-4A80-8B1D-C68A32A37387}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sql_database", "Sql_database\Sql_database.csproj", "{D98CE722-85F9-4A80-8B1D-C68A32A37387}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging", "Messagin\Messaging.csproj", "{84EDE607-855D-4B56-9C90-E5122F288DE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{D98CE722-85F9-4A80-8B1D-C68A32A37387}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D98CE722-85F9-4A80-8B1D-C68A32A37387}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D98CE722-85F9-4A80-8B1D-C68A32A37387}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84EDE607-855D-4B56-9C90-E5122F288DE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84EDE607-855D-4B56-9C90-E5122F288DE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84EDE607-855D-4B56-9C90-E5122F288DE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84EDE607-855D-4B56-9C90-E5122F288DE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
