@@ -373,8 +373,8 @@ namespace Database_Helpers
                 Int16 status = 0;
                 Int16 priority = 0;
                 long driverID = 0;
-                float longitude = 0;
-                float latitude = 0;
+                double longitude = 0;
+                double latitude = 0;
 
                 while (read.Read()) //Reads single line
                 {
@@ -386,8 +386,8 @@ namespace Database_Helpers
                     status = read.GetInt16(4);
                     priority = read.GetInt16(5);
                     driverID = read.GetInt64(6);
-                    longitude = read.GetFloat(7);
-                    latitude = read.GetFloat(8);
+                    longitude = read.GetDouble(7);
+                    latitude = read.GetDouble(8);
                 }
 
                 Order newOrder = new Order(id, desc, LocTo, LocFrom, (Core.Classes.status)status, (Core.Classes.priority)priority, driverID, longitude, latitude);

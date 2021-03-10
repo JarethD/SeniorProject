@@ -8,71 +8,76 @@
         mc:Ignorable="d"
         Title="Jareth Dodson Senior Project Test Window" Height="500" Width="600" WindowStyle="ThreeDBorderWindow">
     
-    <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
-            <StackPanel HorizontalAlignment="Left" Margin="5,5,5,5">
-                <Button x:Name="AddHardwarestore" Content="Add HS"   Click="AddHardwarestore_Click"/>
-                <TextBox x:Name="HardwareStorePassword"/>
-                <Button x:Name="AddLumberassociate" Content="Add la" Click="AddLumberassociate_Click"/>
-                <Button x:Name="AddLumbercompany" Content="Add lc"   Click="AddLumbercompany_Click"/>
-                <Button x:Name="AddTruckdriver" Content="Add td"   Click="AddTruckdriver_Click"/>
-                <PasswordBox x:Name="TruckDriverPassword"/>
-                <Button x:Name="AddOrder" Content="Add Order" Click="AddOrder_Click" />
-            
-            </StackPanel>
-            <StackPanel HorizontalAlignment="Right" Margin="5,5,5,5">
-                <Button x:Name="DeleteHardwareStore" Content="Delete Store" HorizontalContentAlignment="Left" Click="DeleteHardwareStore_Click"/>
-                <Button x:Name="DeleteLumberAssociate" Content="Delete Associate" HorizontalContentAlignment="Left" Click="DeleteLumberAssociate_Click"/>
-                <Button x:Name="DeleteLumberCompany" Content="Delete Lumber Company" HorizontalContentAlignment="Left" Click="DeleteLumberCompany_Click"/>
-                <Button x:Name="DeleteTruckDriver" Content="Delete Truck Driver" HorizontalContentAlignment="Left" Click="DeleteTruckDriver_Click"/>
-            </StackPanel>
-        </StackPanel>
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                <StackPanel HorizontalAlignment="Left" Margin="5,5,5,5">
+                    <Button x:Name="AddHardwarestore" Content="Add HS"   Click="AddHardwarestore_Click"/>
+                    <TextBox x:Name="HardwareStorePassword"/>
+                    <Button x:Name="AddLumberassociate" Content="Add la" Click="AddLumberassociate_Click"/>
+                    <Button x:Name="AddLumbercompany" Content="Add lc"   Click="AddLumbercompany_Click"/>
+                    <Button x:Name="AddTruckdriver" Content="Add td"   Click="AddTruckdriver_Click"/>
+                    <PasswordBox x:Name="TruckDriverPassword"/>
+                    <Button x:Name="AddOrder" Content="Add Order" Click="AddOrder_Click" />
 
-        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="5,5,5,5">
-            <Button x:Name="GetLumberCompanyButton" Content="Get Lumber Company" Click="GetLumberCompanyButton_Click"/>
-            <TextBox x:Name="CompUsernameBox" />
-            <TextBlock x:Name="CompUsernameText" Margin="5,5,5,5" Background="AliceBlue"/>
-        </StackPanel>
-        
-        <StackPanel Orientation="Horizontal">
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Right" Margin="5,5,5,5">
+                    <Button x:Name="DeleteHardwareStore" Content="Delete Store" HorizontalContentAlignment="Left" Click="DeleteHardwareStore_Click"/>
+                    <Button x:Name="DeleteLumberAssociate" Content="Delete Associate" HorizontalContentAlignment="Left" Click="DeleteLumberAssociate_Click"/>
+                    <Button x:Name="DeleteLumberCompany" Content="Delete Lumber Company" HorizontalContentAlignment="Left" Click="DeleteLumberCompany_Click"/>
+                    <Button x:Name="DeleteTruckDriver" Content="Delete Truck Driver" HorizontalContentAlignment="Left" Click="DeleteTruckDriver_Click"/>
+                </StackPanel>
+            </StackPanel>
+
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="5,5,5,5">
-                <Button x:Name="GetOrder" Content="Get Order" Click="GetOrder_Click"/>
-                <DockPanel LastChildFill="True">
-                    <TextBlock Text="ID: " DockPanel.Dock="Left"/>
-                    <TextBox x:Name="GetOrderBox" Width="Auto"/>
-                </DockPanel>
-                <TextBlock x:Name="OrderBlock"/>
+                <Button x:Name="GetLumberCompanyButton" Content="Get Lumber Company" Click="GetLumberCompanyButton_Click"/>
+                <TextBox x:Name="CompUsernameBox" />
+                <TextBlock x:Name="CompUsernameText" Margin="5,5,5,5" Background="AliceBlue"/>
             </StackPanel>
-            
-            <StackPanel>
-                <Grid>
-                    <ListView Margin="10" Name="OrderList"></ListView>
-                </Grid>
-            </StackPanel>
-            <StackPanel>
-                <ComboBox Name="IdentifierBox"/>
-                <DockPanel LastChildFill="True">
-                    <TextBlock Text="Username"/>
-                    <TextBox x:Name="UsernameBox"/>
-                </DockPanel>
-                <DockPanel LastChildFill="True">
-                    <TextBlock Text="Password"/>
-                    <TextBox x:Name="isPasswordBox"/>
-                </DockPanel>
-                <TextBlock x:Name="IsPasswordBlock"/>
-                <Button x:Name="submitPass" Content="Verify Password" Click="submitPass_Click"/>
-            </StackPanel>
-        </StackPanel>
 
-        <StackPanel Orientation="Horizontal">
-            <Button x:Name="MapButton" Content="Get Location" Click="MapButton_Click"/>
-            <TextBox x:Name="LocationID"/>
-        </StackPanel>
-        <Grid Height="120">
-            <m:Map x:Name="OrderMap" CredentialsProvider="sbE9cEyP9Jww2VeQYVvU~7sUdoDqhPEQo9puj1-SPtA~AklVyYpivL07obf45GyQLM-V3FCdmuIGVjQ8fvC3EyQtst7zAFd8qR15CwaNzT5j">
-                <m:Pushpin x:Name="OrderPushPin" Visibility="Hidden"/>
-            </m:Map>
-        </Grid>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="5,5,5,5">
+                    <Button x:Name="GetOrder" Content="Get Order" Click="GetOrder_Click"/>
+                    <DockPanel LastChildFill="True">
+                        <TextBlock Text="ID: " DockPanel.Dock="Left"/>
+                        <TextBox x:Name="GetOrderBox" Width="Auto"/>
+                    </DockPanel>
+                    <TextBlock x:Name="OrderBlock"/>
+                </StackPanel>
 
+                <StackPanel>
+                    <Grid>
+                        <ListView Margin="10" Name="OrderList"></ListView>
+                    </Grid>
+                </StackPanel>
+                <StackPanel>
+                    <ComboBox Name="IdentifierBox"/>
+                    <DockPanel LastChildFill="True">
+                        <TextBlock Text="Username"/>
+                        <TextBox x:Name="UsernameBox"/>
+                    </DockPanel>
+                    <DockPanel LastChildFill="True">
+                        <TextBlock Text="Password"/>
+                        <TextBox x:Name="isPasswordBox"/>
+                    </DockPanel>
+                    <TextBlock x:Name="IsPasswordBlock"/>
+                    <Button x:Name="submitPass" Content="Verify Password" Click="submitPass_Click"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <DockPanel LastChildFill="True">
+                    <Button x:Name="MapButton" Content="Get Location" Click="MapButton_Click"/>
+                    <TextBox x:Name="LocationID" />
+                </DockPanel>
+            </StackPanel>
+            <Grid Height="120">
+                <m:Map x:Name="OrderMap" CredentialsProvider="sbE9cEyP9Jww2VeQYVvU~7sUdoDqhPEQo9puj1-SPtA~AklVyYpivL07obf45GyQLM-V3FCdmuIGVjQ8fvC3EyQtst7zAFd8qR15CwaNzT5j">
+                    <m:Pushpin x:Name="OrderPushPin" Visibility="Hidden"/>
+                </m:Map>
+            </Grid>
+        </StackPanel>
+        <Button x:Name="LoginPage" Content="Login Page" Height="20" Click="LoginPage_Click"/>
     </StackPanel>
+    
 </Window>

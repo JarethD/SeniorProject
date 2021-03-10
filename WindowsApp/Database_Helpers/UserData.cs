@@ -221,7 +221,9 @@ namespace Database_Helpers
 
         public Order GetSingleOrder(long OrderID)
         {
-            string query = string.Format("SELECT [Longitude],[Latitude] " +
+            string query = string.Format("SELECT" +
+                " [OrderID] ,[Description] ,[LocationTo]," +
+                "[LocationFrom],[Status],[Priority],[DriverID], [Longitude],[Latitude] " +
                 "FROM[dbo].[Orders] " +
                 "WHERE OrderID = {0}", OrderID);
             return _db.ExecuteQuery_GetOrder(query);

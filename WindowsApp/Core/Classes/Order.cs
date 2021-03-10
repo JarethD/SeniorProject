@@ -20,8 +20,8 @@ namespace Core.Classes
         public string m_oLocationFrom { get; set; }
         public status m_oStatus { get; set; }
         public priority m_oPriority { get; set; }
-        public float m_longitude { get; set; }
-        public float m_latitude { get; set; }
+        public double m_longitude { get; set; }
+        public double m_latitude { get; set; }
         public Order()
         {
             // empty ctor
@@ -52,7 +52,7 @@ namespace Core.Classes
 
         public Order(long id, string desc, string locTo, string locFrom,
             status curStatus, priority curPriority, long dID,
-            float longitude, float latitude)
+            double longitude, double latitude)
         {
             m_oID = id;
             m_oDescription = desc;

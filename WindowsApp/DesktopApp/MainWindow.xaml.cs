@@ -177,12 +177,19 @@ namespace DesktopApp
 
         private void MapButton_Click(object sender, RoutedEventArgs e)
         {
-            Order newOrder = databaseAccess.GetSingleOrder(2);
-            Location newLoc = new Location(newOrder.m_longitude, newOrder.m_latitude);
+            Order newOrder = databaseAccess.GetSingleOrder(Int32.Parse(LocationID.Text));
+            Location newLoc = new Location(Convert.ToDouble(newOrder.m_longitude), Convert.ToDouble(newOrder.m_latitude));
             OrderMap.Center = newLoc;// new Location(42.2087005, -121.7496298);
             OrderMap.ZoomLevel = 16;
             OrderPushPin.Visibility = Visibility.Visible;
             OrderPushPin.Location = newLoc;
+        }
+
+        private void LoginPage_Click(object sender, RoutedEventArgs e)
+        {
+            Login loginPage = new Login();
+            loginPage.Show();
+            
         }
     }
 }
