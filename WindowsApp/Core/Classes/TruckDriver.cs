@@ -75,6 +75,17 @@ namespace Core.Classes
             //m_trCompany = company;
          }
 
+        public TruckDriver(string username, string hashpass, //int id, 
+            string name, long id, long phonenum, string address, long companyID)
+        { 
+            m_trUsername = username;
+            m_trHashPass = hashpass;
+            m_trName = name;
+            m_trPhoneNum = phonenum;
+            m_trAddress = address;
+            m_trID = id;
+            m_trCompID = companyID;
+        }
         public TruckDriver(TruckDriver driver)
         {
             m_trUsername = driver.username;

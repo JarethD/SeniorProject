@@ -21,6 +21,7 @@
             <RowDefinition />
             <RowDefinition />
             <RowDefinition />
+            <RowDefinition />
         </Grid.RowDefinitions>
 
         <Label Content="Username" Grid.Row="0" Grid.Column="0"/>
@@ -36,8 +37,14 @@
         <TextBox x:Name="AddressBox" Grid.Row="3" Grid.Column="1" Width="80" Margin="5,0,5,0"/>
 
         <Label Content="Account Type" Grid.Row="4" Grid.Column="0"/>
-        <ComboBox Name="AccountType" Grid.Row="4" Grid.Column="1" SelectionChanged="AccountType_SelectionChanged" Margin="5,0,5,0"/>
-        
+        <ComboBox Name="AccountTypeBox" Grid.Row="4" Grid.Column="1" SelectionChanged="AccountType_SelectionChanged" Margin="5,0,5,0"/>
 
+        <Label Content="Name - If employee" Grid.Row="5" Grid.Column="0"/>
+        <TextBox Name="NameBox" Grid.Row="5" Grid.Column="1" Margin="5,0,5,0"/>
+
+        <Label Content="Phone number" Grid.Row="6" Grid.Column="0"/>
+        <TextBox Name="PhoneNumberBox" Grid.Row="6" Grid.Column="1" Margin="5,0,5,0"/>
+
+        <Button x:Name="AddUserButton" Content="Add User" Grid.Row="7" Grid.Column="0" Click="AddUserButton_Click"/>
     </Grid>
 </Window>
