@@ -46,5 +46,18 @@
         <TextBox Name="PhoneNumberBox" Grid.Row="6" Grid.Column="1" Margin="5,0,5,0"/>
 
         <Button x:Name="AddUserButton" Content="Add User" Grid.Row="7" Grid.Column="0" Click="AddUserButton_Click"/>
+    
+        <!--  End of Registration GUI -->
+
+        <Label Content="Username: " Grid.Row="0" Grid.Column="2"/>
+        <TextBox x:Name="UsernameLoginBox" Width="80"  Grid.Row="0" Grid.Column="3"/>
+
+        <Label Content="Password: " Grid.Row="1" Grid.Column="2"/>
+        <PasswordBox x:Name="PasswordLoginBox" Width="80"  Grid.Row="1" Grid.Column="3"/>
+
+        <Button Content="Login" x:Name="LoginButton" Grid.Row="2" Grid.Column="3" Click="LoginButton_Click"/>
+        <ComboBox Name="AccountTypeLoginBox" Grid.Row="3" Grid.Column="3" SelectionChanged="AccountType_SelectionChanged" Margin="5,0,5,0"/>
+
+        <Label Content="" x:Name="LoginSuccess" Grid.Row="4" Grid.Column="4"/>
     </Grid>
 </Window>

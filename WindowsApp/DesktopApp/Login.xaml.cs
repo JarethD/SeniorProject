@@ -38,6 +38,10 @@ namespace DesktopApp
             AccountTypeBox.Items.Add("Truck Driver");
             AccountTypeBox.Items.Add("Lumber Associate");
 
+            AccountTypeLoginBox.Items.Add("Lumber Company");
+            AccountTypeLoginBox.Items.Add("Hardware Store");
+            AccountTypeLoginBox.Items.Add("Truck Driver");
+            AccountTypeLoginBox.Items.Add("Lumber Associate");
         }
 
         private void AccountType_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -59,7 +63,7 @@ namespace DesktopApp
                 LumberAssociate newLA = new LumberAssociate(UsernameBox.Text, HashPass, NameBox.Text, id, phoneNum, AddressBox.Text, 0);
                 databaseAccess.AddLumberAssociate(newLA);
             }
-            else if (AccountTypeBox.SelectedItem.Equals("TruckDriver"))
+            else if (AccountTypeBox.SelectedItem.Equals("Truck Driver"))
             {
                 long id = databaseAccess.GetRecentEmployeeID();
 
@@ -79,6 +83,30 @@ namespace DesktopApp
                 HardwareStore newHS = new HardwareStore(UsernameBox.Text, HashPass, id, CompanyBox.Text, AddressBox.Text, phoneNum);
                 databaseAccess.AddHardwareStore(newHS);
             }
+        }
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            bool login = true;
+            if (AccountTypeLoginBox.SelectedItem.Equals("Truck Driver"))
+            {
+                TruckDriver driver = databaseAccess.GetTruckDriver(UsernameLoginBox.Text);
+                if(driver == null)
+                {
+                    if(!BCryptHash.ValidatePassword(PasswordLoginBox.Password, driver.HashPass))
+                    {
+                        login = false;
+                        //SqlServerDataAccess.CurTD = driver;
+                    }
+                }
+
+                if (login)
+                {
+                    SqlServerDataAccess.CurTD = driver;
+                    LoginSuccess.Content = "true";
+                }
+            }
+
         }
     }
 }
